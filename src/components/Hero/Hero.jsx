@@ -5,8 +5,8 @@ export const Hero = () => {
         <div className="hero">
             <Illustration
                 align={'right'}
-                src={"../img/illustration-hero.svg"}
-            />
+                src={"../../img/illustration-hero"}
+            /> 
             <h1>A Simple Bookmark Manager</h1>
             <p>
                 A clean and simple interface to organize your favourite websites.
