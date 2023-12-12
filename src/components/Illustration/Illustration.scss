@@ -1,0 +1,26 @@
+.illustration {
+    width: 75%;
+    background-color: hsl(231, 69%, 60%);
+    height: 300px;position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+  
+  &--align-right {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    float: right;
+  }
+  
+  &--align-left{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    float: left;
+  }
+
+}
+  
