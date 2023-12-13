@@ -1,7 +1,6 @@
 import './App.scss';
 import { Nav } from './components/Nav/Nav';
 import { Header } from './components/Header/Header';
-// import { Illustration } from './components/Illustration/Illustration';
 import { Hero } from './components/Hero/Hero';
 import { Features } from './components/Features/Features';
 import { Download } from './components/Download/Download';

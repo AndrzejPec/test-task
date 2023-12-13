@@ -19,7 +19,7 @@ export const Hero = () => {
             </p>
             <div className="hero__buttons">
             <button className="button hero__button">Get it on Chrome</button>
-            <button className="button hero__button">Get it on Firefox</button>
+            <button className="button hero__button hero__button--light">Get it on Firefox</button>
             </div>
         </div>
     )

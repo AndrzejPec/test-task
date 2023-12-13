@@ -39,9 +39,12 @@
   p {
     color: hsl(229, 8%, 60%);
     margin: 20px 0 30px;
+    line-height: 1.5;
   }
+  
+}
 
-  button {
+.button {
     background-color: hsl(231, 69%, 60%);
     outline: transparent;
     padding: 20px;
@@ -56,7 +59,6 @@
     transition: background-color 0.3s ease;
     color: white;
   }
-}
 
 .App-logo {
   height: 40vmin;

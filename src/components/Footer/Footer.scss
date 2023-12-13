@@ -1,12 +1,18 @@
 .footer {
     display: flex;
     flex-direction: column;
+    margin-inline: -30px;
     padding: 20px 0;
     gap: 10px;
     height: 100%;
     background-color: hsl(229, 31%, 21%);
     align-items: center;
     color: white;
+
+    &__logo {
+        height: 20px;
+        margin-bottom: 20px;
+    }
 
     &__list {
         color: white;
@@ -20,6 +26,12 @@
         align-items: center;
         flex-direction: column;
         color: white;
-        text-transform: capitalize;
+        text-transform: uppercase;
+    }
+
+    &__social {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
     }
 }

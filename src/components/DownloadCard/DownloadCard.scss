@@ -1,0 +1,12 @@
+.download-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    background-color: white;
+
+    &__img {
+        width: 100px;
+    }
+}
