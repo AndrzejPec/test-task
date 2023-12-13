@@ -1,4 +1,25 @@
 .footer {
     display: flex;
+    flex-direction: column;
     padding: 20px 0;
+    gap: 10px;
+    height: 100%;
+    background-color: hsl(229, 31%, 21%);
+    align-items: center;
+    color: white;
+
+    &__list {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        text-transform: capitalize;
+    }
 }
