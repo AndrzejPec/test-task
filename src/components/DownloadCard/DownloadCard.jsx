@@ -1,11 +1,12 @@
 import './DownloadCard.scss';
 
-export const DownloadCard = ({ browser, imgUrl }) => {
+export const DownloadCard = ({ browser, src, version }) => {
 
     return (
         <div className="download-card">
-            <img src={imgUrl} alt={browser} />
-            <h3>{browser}</h3>
+            <img src={src} alt={browser} />
+            <h3>Add to {browser}</h3>
+            <p>Minimum version {version}</p>
         </div>
     )
 }

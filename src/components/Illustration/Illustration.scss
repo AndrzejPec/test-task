@@ -1,7 +1,9 @@
 .illustration {
     width: 75%;
     background-color: hsl(231, 69%, 60%);
-    height: 300px;position: relative;
+    height: 250px;
+    position: relative;
+    margin: 0 -30px;
 
     img {
         position: absolute;
@@ -13,13 +15,13 @@
   &--align-right {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
-    float: right;
+    align-self: flex-end;
   }
   
   &--align-left{
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
-    float: left;
+    align-self: flex-start;
   }
 
 }

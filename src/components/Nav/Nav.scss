@@ -1,4 +1,17 @@
 .nav {
-    display: flex;
     padding: 50px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        height: 25px;
+    }
+
+    &__hamburger {
+        width: 20px;
+        height: 20px;
+    }
 }
