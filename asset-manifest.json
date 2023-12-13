@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.8b22f321.css",
-    "main.js": "/test-task/static/js/main.f1d78f14.js",
+    "main.css": "/test-task/static/css/main.3dc049f6.css",
+    "main.js": "/test-task/static/js/main.9ab055a0.js",
     "static/js/787.4785e9bf.chunk.js": "/test-task/static/js/787.4785e9bf.chunk.js",
     "static/media/illustration-hero.svg": "/test-task/static/media/illustration-hero.07801d05cb11930f0c826add8c05ce22.svg",
     "static/media/logo-bookmark.svg": "/test-task/static/media/logo-bookmark.d426263a94701e122e7d14b0c6eee7ce.svg",
+    "static/media/logo-bookmark-white.svg": "/test-task/static/media/logo-bookmark-white.5f5c0b755ecfffc1468063404877de02.svg",
     "static/media/illustration-features-tab-1.svg": "/test-task/static/media/illustration-features-tab-1.0da3d302207bcad90cdadc5052e35ed6.svg",
     "static/media/logo-chrome.svg": "/test-task/static/media/logo-chrome.a42815a014c452e4d95851f7a8daf95b.svg",
     "index.html": "/test-task/index.html",
@@ -14,12 +15,12 @@
     "static/media/icon-facebook.svg": "/test-task/static/media/icon-facebook.8b45ba94b5f75f0d38a9bbcc11df55c2.svg",
     "static/media/logo-opera.svg": "/test-task/static/media/logo-opera.ff14e4763945338fe002017c72e7e597.svg",
     "static/media/icon-hamburger.svg": "/test-task/static/media/icon-hamburger.4385fd507d24f37ccbb3ae359b5c9555.svg",
-    "main.8b22f321.css.map": "/test-task/static/css/main.8b22f321.css.map",
-    "main.f1d78f14.js.map": "/test-task/static/js/main.f1d78f14.js.map",
+    "main.3dc049f6.css.map": "/test-task/static/css/main.3dc049f6.css.map",
+    "main.9ab055a0.js.map": "/test-task/static/js/main.9ab055a0.js.map",
     "787.4785e9bf.chunk.js.map": "/test-task/static/js/787.4785e9bf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b22f321.css",
-    "static/js/main.f1d78f14.js"
+    "static/css/main.3dc049f6.css",
+    "static/js/main.9ab055a0.js"
   ]
 }
