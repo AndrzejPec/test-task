@@ -4,7 +4,7 @@ export const Nav = () => {
 
     return (
         <nav className="nav">
-            <img src="./logo-bookmark.svg" alt="Logo"></img>
+            <img src="./logo-bookmark.svg" alt="Logo" />
         </nav>
     )
 }
