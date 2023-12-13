@@ -40,7 +40,7 @@ export const FAQ = () => {
                     tempor porta. Cras ac leo purus. Mauris quis diam velit.
                 </p>
             </Accordion>
-            <button>More Info</button>
+            <button className='button'>More Info</button>
         </div>
     )
 }

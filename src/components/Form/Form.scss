@@ -8,12 +8,18 @@
     flex-direction: column;
     margin-inline: -30px;
 
-    &__text {
+    &__counter {
         text-transform: uppercase;
     }
 
     &__title {
         font-weight: 400;
+    }
+
+    &__body {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
     }
 
     &__input {
@@ -27,3 +33,63 @@
         background-color: hsl(0, 94%, 66%);
     }
 }
+
+.form__input--error {
+    border: 2px solid hsl(0, 94%, 66%); // Pomarańczowe obramowanie dla inputu z błędem
+  }
+  
+  .form__error {
+    display: block;
+    color: white;
+    background-color: hsl(0, 94%, 66%); // Pomarańczowe tło dla komunikatu o błędzie
+    padding: .5em;
+    border-radius: .25em;
+    position: absolute; // Aby wyświetlał się nad pozostałymi elementami
+    bottom: -3em; // Dostosuj odstęp od inputa
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .form__input-group {
+    position: relative; // Pozwala na pozycjonowanie .form__error względem tego diva
+  }
+  
+
+.email-input-container {
+    position: relative;
+    max-width: 300px; /* Adjust as necessary */
+  }
+  
+  #emailInput {
+    border: 2px solid #cccccc; /* Light grey border */
+    border-radius: 5px;
+    /* other styling as needed */
+  }
+  
+  #emailInput:focus {
+    /* styles for when the input is focused */
+  }
+  
+  #emailInput.error {
+    border-color: #FFA500; /* Change border to orange when there is an error */
+    /* other error styles as needed */
+  }
+  
+  .error-message {
+    display: none;
+    position: absolute;
+    bottom: -20px; /* Adjust as necessary */
+    left: 0;
+    background-color: #FFA500; /* Orange background for the error message */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    /* other styling as needed */
+  }
+  
+  #emailInput.error + .error-message {
+    display: block; /* Show the error message when there is an error */
+  }
+  

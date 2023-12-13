@@ -1,7 +1,7 @@
 import './Footer.scss';
 import facebook from '../../img/icon-facebook.svg';
 import twitter from '../../img/icon-twitter.svg';
-import logo from '../../img/logo-bookmark.svg';
+import logo from '../../img/logo-bookmark-white.svg';
 
 export const Footer = () => {
 

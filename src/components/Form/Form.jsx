@@ -14,21 +14,49 @@ export const Form = () => {
         }, 20000);
     
         return () => clearInterval(interval);
-      }, []);
+    }, []);
+
+    const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState('');
+      
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+        setEmailError('');
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!email) {
+          setEmailError('Email is required');
+        } else if (!email.includes('@')) {
+          setEmailError('Please enter a valid email address');
+        } else {
+          // handle form submission
+        }
+    };
     
     return (
-        <form class="form">
-            <span className="form__text">{counter}+ already joined</span>
+        <div className="form">
+
+            <span className="form__counter">{counter}+ already joined</span>
 
             <h2 className="form__title">Stay up-to-date with what we're doing</h2>
 
-            <input
-                type="text"
-                placeholder="Enter your email address"
-                className='form__input'
-            />
+            <form onSubmit={handleSubmit} className="form__body">
+                
+                <input
+                    type="text"
+                    placeholder="Enter your email address"
+                    id="emailInput"
+                    className='form__input'
+                    value={email}
+                    onChange={handleEmailChange}
+                />
 
-            <button className="form__button button" type="submit">Submit</button>
-        </form>
+                <button className="form__button button" type="submit">Submit</button>
+
+            </form>
+
+        </div>
     )
 }
