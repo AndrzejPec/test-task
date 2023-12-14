@@ -51,8 +51,8 @@
     }
   
     // Efekt hover
-    &:hover::after {
-      transform: scaleX(1); // Pełna szerokość na hover
+    &.active::after {
+      transform: scaleX(0.5); // Pełna szerokość kiedy klasa active jest dodana
     }
   }
 

@@ -1,7 +1,32 @@
+import React, { useState } from 'react';
 import './FAQ.scss';
 import { Accordion } from '../Accordion/Accordion';
 
+const FAQ_DATA = [
+    {
+        title: "What is Bookmark?",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+    },
+    {
+        title: "How can I request a new browser?",
+        content: "Vivamus luctus eros aliquet convallis ultricies..."
+    },
+    {
+        title: "Is there a mobile app?",
+        content: "Sed consectetur quam id neque fermentum accumsan..."
+    },
+    {
+        title: "What about other Chromium browsers?",
+        content: "Integer fringilla congue eros non fermentum..."
+    }
+];
+
 export const FAQ = () => {
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const toggleAccordion = index => {
+        setActiveIndex(index === activeIndex ? null : index);
+    };
 
     return (
         <div className="faq">
@@ -9,37 +34,16 @@ export const FAQ = () => {
             <p>
                 Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.
             </p>
-            <Accordion title="What is Bookmark?">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-                    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam
-                    ornare nec pulvinar tellus laoreet. Integer fringilla congue eros
-                    non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
-                    purus. Mauris quis diam velit.
-                </p>
-            </Accordion>
-            <Accordion title="How can I request a new browser?">
-                <p>
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-                    ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
-                    aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-                    Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-                    Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-                </p>
-            </Accordion>
-            <Accordion title="Is there a mobile app?">
-                <p>
-                    Sed consectetur quam id dui. Praesent ligula. Praesent egestas tristique
-                    nibh. Praesent egestas tristique nibh. Praesent egestas tristique nibh.
-                    Praesent egestas tristique nibh. Praesent egestas tristique nibh.
-                </p>
-            </Accordion>
-            <Accordion title="What about other Chromium browsers?">
-                <p>
-                    Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh
-                    tempor porta. Cras ac leo purus. Mauris quis diam velit.
-                </p>
-            </Accordion>
+            {FAQ_DATA.map((item, index) => (
+                <Accordion
+                    key={item.title}
+                    title={item.title}
+                    isActive={index === activeIndex}
+                    onClick={() => toggleAccordion(index)}
+                >
+                    <p>{item.content}</p>
+                </Accordion>
+            ))};
             <button className='button'>More Info</button>
         </div>
     )
