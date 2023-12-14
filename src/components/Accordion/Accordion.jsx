@@ -1,24 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import './Accordion.scss';
 
-export const Accordion = ({ title, isActive, onClick, children }) => {
-    const contentRef = useRef(null);
+import arrow from '../../img/icon-arrow.svg';
 
+export const Accordion = ({ title, isActive, onClick, children }) => {
     return (
         <div className={`accordion__item ${isActive ? 'active' : ''}`}>
             <div className="accordion__title" onClick={onClick}>
                 {title}
-                <span className="accordion__icon"></span>
+                <img src={arrow} alt="Toggle" className="accordion__icon" />
             </div>
-            <div
-                className="accordion__content"
-                ref={contentRef}
-            >
-                {isActive && (
-                    <div className="accordion__content-inner">
-                        {children}
-                    </div>
-                )}
+            <div className={`accordion__content ${isActive ? 'active' : ''}`}>
+                <div className="accordion__content-inner">
+                    {isActive && children}
+                </div>
             </div>
         </div>
     );

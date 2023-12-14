@@ -1,43 +1,41 @@
-.accordion__item {
-    // style dla całego itemu akordeonu
-  
-    &.active {
-      .accordion__title {
-        // style dla tytułu akordeonu, gdy jest aktywny
-      }
-  
-      .accordion__content {
-        // style dla treści akordeonu, gdy jest aktywny
-        max-height: none; // zezwól na naturalną wysokość treści
-      }
-    }
-  
-    .accordion__title {
-      // style dla tytułu akordeonu
-      cursor: pointer;
-      // inne style dla tytułu...
-  
-      &:after {
-        content: '+';
-        // style dla ikony
-      }
-    }
+@import '../../styles/variables';
 
+.accordion__item {
+    // Style dla całego elementu akordeonu
+    .accordion__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 20px 0;
+      border-bottom: 1px solid $grayish;
+  
+      // Style dla h3 i ikony strzałki...
+      h3 {
+        // Style dla h3
+      }
+  
+      .accordion__icon {
+        // Opcjonalne: Możesz dodać style dla ikony, jeśli potrzebujesz
+        transition: transform 0.3s ease;
+      }
+    }
+  
+    &.active .accordion__icon {
+      transform: rotate(180deg);
+    }
+  
     .accordion__content {
       overflow: hidden;
       transition: max-height 0.3s ease;
-      // inne style dla treści...
-    }
-  }
-
-  // Poniżej są style, które będą stosowane, gdy accordion__item nie ma klasy .active
-  .accordion__item:not(.active) {
-    .accordion__title:after {
-      content: '−';
-    }
   
-    .accordion__content {
-      max-height: 0; // chowaj treść, gdy akordeon nie jest aktywny
+      &.active {
+        max-height: 500px; // Przykład maksymalnej wysokości, dostosuj do swoich potrzeb
+      }
+  
+    //   &.active .accordion__content-inner {
+    //     padding: 1em; // Przykład paddingu, dostosuj do swoich potrzeb
+    //   }
     }
   }
   
