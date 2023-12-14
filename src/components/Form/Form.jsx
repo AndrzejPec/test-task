@@ -5,16 +5,21 @@ export const Form = () => {
     const [counter, setCounter] = useState(35000);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-          setCounter(prevCounter => prevCounter - 175);
-        }, 100);
-    
-        setTimeout(() => {
-          clearInterval(interval);
-        }, 20000);
-    
-        return () => clearInterval(interval);
-    }, []);
+      let remainingTime = 20000; // 20 sekund w milisekundach
+      const interval = setInterval(() => {
+          setCounter(prevCounter => {
+              const newCounter = prevCounter - 1750;
+              return newCounter > 0 ? newCounter : 0; // Zapobiegaj ujemnym wartościom
+          });
+          remainingTime -= 1000; // Zmniejsz pozostały czas co sekundę
+          if (remainingTime <= 0) {
+              clearInterval(interval); // Zatrzymaj interwał, gdy czas się skończy
+          }
+      }, 1000);
+  
+      return () => clearInterval(interval); // Oczyść interwał przy demontażu komponentu
+  }, []);
+  
 
     const [email, setEmail] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -38,7 +43,7 @@ export const Form = () => {
     return (
         <div className="form">
 
-            <span className="form__counter">{counter}+ already joined</span>
+            <span className="form__counter">{counter}{counter ? '+' : ''} already joined</span>
 
             <h2 className="form__title">Stay up-to-date with what we're doing</h2>
 

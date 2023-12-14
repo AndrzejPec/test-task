@@ -30,9 +30,29 @@
     line-height: normal;
     padding: 20px;
     border-bottom: 1px solid;
+    position: relative;
+    cursor: pointer;
+
 
     &:first-of-type {
       border-top: 1px solid;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; // Położenie tuż pod tekstem
+      left: 0;
+      right: 0;
+      height: 3px; // Grubość kładki
+      background-color: red; // Kolor kładki
+      transform: scaleX(0); // Zaczyna niewidoczne
+      transition: transform 0.3s ease-in-out; // Animacja rozciągania
+    }
+  
+    // Efekt hover
+    &:hover::after {
+      transform: scaleX(1); // Pełna szerokość na hover
     }
   }
 
