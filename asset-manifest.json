@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.dd0e353d.css",
-    "main.js": "/test-task/static/js/main.7f923a6e.js",
+    "main.css": "/test-task/static/css/main.dc42a83b.css",
+    "main.js": "/test-task/static/js/main.6fb32ffe.js",
     "static/js/787.4785e9bf.chunk.js": "/test-task/static/js/787.4785e9bf.chunk.js",
     "static/media/illustration-features-tab-3.svg": "/test-task/static/media/illustration-features-tab-3.a4206aab7946773b29b702492d2d014b.svg",
     "static/media/illustration-features-tab-2.svg": "/test-task/static/media/illustration-features-tab-2.e933bd6d921c537d7743e08ea4ec488e.svg",
@@ -16,12 +16,13 @@
     "static/media/icon-facebook.svg": "/test-task/static/media/icon-facebook.8b45ba94b5f75f0d38a9bbcc11df55c2.svg",
     "static/media/logo-opera.svg": "/test-task/static/media/logo-opera.ff14e4763945338fe002017c72e7e597.svg",
     "static/media/icon-hamburger.svg": "/test-task/static/media/icon-hamburger.4385fd507d24f37ccbb3ae359b5c9555.svg",
-    "main.dd0e353d.css.map": "/test-task/static/css/main.dd0e353d.css.map",
-    "main.7f923a6e.js.map": "/test-task/static/js/main.7f923a6e.js.map",
+    "static/media/icon-arrow.svg": "/test-task/static/media/icon-arrow.8174203a5d4fc44f5247b825de6e2158.svg",
+    "main.dc42a83b.css.map": "/test-task/static/css/main.dc42a83b.css.map",
+    "main.6fb32ffe.js.map": "/test-task/static/js/main.6fb32ffe.js.map",
     "787.4785e9bf.chunk.js.map": "/test-task/static/js/787.4785e9bf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd0e353d.css",
-    "static/js/main.7f923a6e.js"
+    "static/css/main.dc42a83b.css",
+    "static/js/main.6fb32ffe.js"
   ]
 }
