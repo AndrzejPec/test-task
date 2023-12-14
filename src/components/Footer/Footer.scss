@@ -9,7 +9,7 @@
     align-items: center;
     color: white;
 
-    &__logo {
+    &__logo svg path g {
         height: 20px;
         margin-bottom: 20px;
     }
@@ -34,4 +34,12 @@
         display: flex;
         gap: 20px;
     }
+}
+
+.footer__logo svg g path {
+    fill: white;
+}
+
+.logo {
+    fill: white;
 }
