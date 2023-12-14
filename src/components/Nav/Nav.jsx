@@ -1,14 +1,24 @@
-import logo from '../../img/logo-bookmark.svg';
-import hamburger from '../../img/icon-hamburger.svg';
+import React, { useState } from 'react';
+import { ReactComponent as Logo } from '../../img/logo-bookmark.svg';
+import { ReactComponent as Hamburger } from '../../img/icon-hamburger.svg';
 import './Nav.scss';
 
 export const Nav = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <nav className="nav">
             <ul className="nav__list">
-                <img className="nav__logo" src={logo} alt="Logo" />
-                <img className="nav__hamburger" src={hamburger} alt="Menu" />
+                <div className="nav__logo">
+                    <Logo className="logo" />
+                </div>
+                <div className="nav__hamburger">
+                    <Hamburger />
+                </div>
             </ul>
         </nav>
     )
