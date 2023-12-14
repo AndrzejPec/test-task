@@ -43,7 +43,7 @@ export const FAQ = () => {
                 >
                     <p>{item.content}</p>
                 </Accordion>
-            ))};
+            ))}
             <button className='button'>More Info</button>
         </div>
     )

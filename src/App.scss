@@ -1,3 +1,5 @@
+@import './styles/variables';
+
 .App {
   margin: 0 auto;
   text-align: center;
@@ -33,7 +35,6 @@
     position: relative;
     cursor: pointer;
 
-
     &:first-of-type {
       border-top: 1px solid;
     }
@@ -45,19 +46,19 @@
       left: 0;
       right: 0;
       height: 3px; // Grubość kładki
-      background-color: red; // Kolor kładki
+      background-color: $lightRed; // Kolor kładki
       transform: scaleX(0); // Zaczyna niewidoczne
       transition: transform 0.3s ease-in-out; // Animacja rozciągania
     }
-  
-    // Efekt hover
+
+    &:hover::after,
     &.active::after {
-      transform: scaleX(0.5); // Pełna szerokość kiedy klasa active jest dodana
+      transform: scaleX(0.5);
     }
   }
 
   p {
-    color: hsl(229, 8%, 60%);
+    color: $grayish;
     margin: 20px 0 30px;
     line-height: 1.5;
   }
@@ -65,7 +66,7 @@
 }
 
 .button {
-    background-color: hsl(231, 69%, 60%);
+    background-color: $lightBlue;
     outline: transparent;
     padding: 20px;
     text-align: center;
@@ -89,20 +90,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {

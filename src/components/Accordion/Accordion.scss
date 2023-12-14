@@ -1,0 +1,43 @@
+.accordion__item {
+    // style dla całego itemu akordeonu
+  
+    &.active {
+      .accordion__title {
+        // style dla tytułu akordeonu, gdy jest aktywny
+      }
+  
+      .accordion__content {
+        // style dla treści akordeonu, gdy jest aktywny
+        max-height: none; // zezwól na naturalną wysokość treści
+      }
+    }
+  
+    .accordion__title {
+      // style dla tytułu akordeonu
+      cursor: pointer;
+      // inne style dla tytułu...
+  
+      &:after {
+        content: '+';
+        // style dla ikony
+      }
+    }
+  
+    .accordion__content {
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      // inne style dla treści...
+    }
+  }
+  
+  // Poniżej są style, które będą stosowane, gdy accordion__item nie ma klasy .active
+  .accordion__item:not(.active) {
+    .accordion__title:after {
+      content: '−';
+    }
+  
+    .accordion__content {
+      max-height: 0; // chowaj treść, gdy akordeon nie jest aktywny
+    }
+  }
+  

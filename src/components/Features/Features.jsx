@@ -6,7 +6,7 @@ import illustrationTab2 from '../../img/illustration-features-tab-2.svg';
 import illustrationTab3 from '../../img/illustration-features-tab-3.svg';   
 
 export const Features = () => {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const handleOnClick = index => {
         setActiveIndex(index);
