@@ -1,6 +1,7 @@
 import './reset.scss';
 import './App.scss';
 
+import { Modal } from './components/Modal/Modal';
 import { Nav } from './components/Nav/Nav';
 import { Hero } from './components/Hero/Hero';
 import { Features } from './components/Features/Features';
@@ -12,6 +13,9 @@ import { Footer } from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
+      
+        <Modal />
+
         <Nav />
 
         <Hero />

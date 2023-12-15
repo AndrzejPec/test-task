@@ -5,7 +5,7 @@ import illustrationTab1 from '../../img/illustration-features-tab-1.svg';
 import illustrationTab2 from '../../img/illustration-features-tab-2.svg';
 import illustrationTab3 from '../../img/illustration-features-tab-3.svg';   
 
-export const Features = () => {
+export const Features = ({ livesInsideModal }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const handleOnClick = index => {
@@ -64,19 +64,25 @@ export const Features = () => {
 
     return (
         <div className="features">
-            <h2>Features</h2>
-            <p>
+            
+            {!livesInsideModal && <h2>Features</h2>}
+
+            {!livesInsideModal && <p>
                 Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
-            </p>
+            </p>}
+
             <h3 onClick={() => handleOnClick(0)} className={activeIndex === 0 ? 'active' : ''}>
                 Simple Bookmarking
             </h3>
+
             <h3 onClick={() => handleOnClick(1)} className={activeIndex === 1 ? 'active' : ''}>
                 Speedy Searching
             </h3>
+
             <h3 onClick={() => handleOnClick(2)} className={activeIndex === 2 ? 'active' : ''}>
                 Easy Sharing
             </h3>
+
             <Illustration
                 align={'left'}
                 src={getCurrentIllustration()}
