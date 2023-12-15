@@ -26,15 +26,21 @@ export const Form = () => {
       
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
-        setEmailError('');
+        if (!e.target.value) {
+            setEmailError('Email is required');
+        } else if (!/\S+@\S+\.\S+/.test(e.target.value)) {
+            setEmailError(`Whoops! Make sure it's an email :)`);
+        } else {
+            setEmailError('');
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!email) {
-          setEmailError('Email is required');
+            setEmailError('Email is required');
         } else if (!email.includes('@')) {
-          setEmailError('Please enter a valid email address');
+            setEmailError(`Whoops! Make sure it's an email :)`);
         } else {
           // handle form submission
         }
@@ -43,22 +49,26 @@ export const Form = () => {
     return (
         <div className="form">
 
-            <span className="form__counter">{`${counter.toLocaleString('de-DE')}${counter ? '+' : ''}`} already joined</span>
+            <span className="form__counter">
+                {`${counter.toLocaleString('de-DE')}${counter ? '+' : ''}`} already joined
+            </span>
 
             <h2 className="form__title">Stay up-to-date with what we're doing</h2>
 
             <form onSubmit={handleSubmit} className="form__body">
-                
+
                 <input
                     type="text"
                     placeholder="Enter your email address"
                     id="emailInput"
-                    className='form__input'
+                    className={`form__input form__input${emailError ? '--error' : ''}`}
                     value={email}
                     onChange={handleEmailChange}
                 />
 
-                <button className="form__button button" type="submit">Submit</button>
+                {emailError && <span className="form__error">{emailError}</span>}
+
+                <button className="form__button button" type="submit">Contact us</button>
 
             </form>
 
