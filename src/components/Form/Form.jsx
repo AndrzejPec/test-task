@@ -43,7 +43,7 @@ export const Form = () => {
     return (
         <div className="form">
 
-            <span className="form__counter">{counter}{counter ? '+' : ''} already joined</span>
+            <span className="form__counter">{`${counter.toLocaleString('de-DE')}${counter ? '+' : ''}`} already joined</span>
 
             <h2 className="form__title">Stay up-to-date with what we're doing</h2>
 
