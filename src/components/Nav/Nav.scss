@@ -4,7 +4,7 @@
     margin-top: 2rem;
     padding-inline: $mobile-margin;
     text-align: initial;
-    position: relative; // Dodaj to dla pozycjonowania absolutnego hamburgera
+    position: relative;
 
     &__logo {
         transform: scale(1.2);
@@ -12,21 +12,21 @@
 
     &__hamburger {
         transform: scale(1.2);
-        position: absolute; // Pozycjonuje hamburgera
-        top: 50%; // Centruje pionowo
-        right: 0; // Odstęp od prawej krawędzi
-        transform: translateY(-50%); // Dokładne wycentrowanie
-        cursor: pointer; // Doda kursor 'pointer' dla lepszej użyteczności
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
         z-index: 2;
     }
 
     &__list {
-        list-style-type: none; // Usuwa domyślne style listy
+        list-style-type: none;
         margin: 0;
         padding: 0;
-        display: none; // Domyślnie ukrywa menu
-        flex-direction: column; // Elementy listy ułożone pionowo
-        align-items: center; // Centruje elementy w poziomie
+        display: none;
+        flex-direction: column;
+        align-items: center;
         position: fixed;
         text-align: center;
         letter-spacing: 2.5px;
@@ -34,15 +34,15 @@
         right: 0;
         height: 100dvh;
         width: 100%;
-        background-color: rgba(37, 43, 70, 0.9); // Półprzezroczyste tło
-        z-index: 1; // Zapewnia, że lista jest na wierzchu
-        transform: translateX(100%); // Początkowo poza ekranem
-        transition: transform 0.3s ease; // Animacja przesuwania
+        background-color: rgba(37, 43, 70, 0.9);
+        z-index: 1;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
 
     
         &--active {
-            display: flex; // Pokazuje menu kiedy jest aktywne
-            transform: translateX(0); // Przesuwa menu do widoku
+            display: flex;
+            transform: translateX(0);
             transition: transform 0.3s ease;
             padding-top: 100px;
         }
@@ -78,9 +78,17 @@
 
 @media (min-width: $breakpoint) {
     .nav {
-        padding-inline: $desktop-margin;
         text-align: initial;
         position: unset;
+        display: unset;
+        justify-content: space-between;
+        align-items: center;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     
         &__logo {
             transform: scale(1.2);
@@ -91,27 +99,28 @@
         }
     
         &__list {
-            list-style-type: none; // Usuwa domyślne style listy
+            list-style-type: none;
             margin: 0;
             padding: 0;
-            flex-direction: column; // Elementy listy ułożone pionowo
-            align-items: center; // Centruje elementy w poziomie
+            flex-direction: column;
+            align-items: center;
             position: fixed;
             text-align: center;
             letter-spacing: 2.5px;
+            display: contents;
             top: 0;
             right: 0;
             height: 100dvh;
             width: 100%;
-            background-color: rgba(37, 43, 70, 0.9); // Półprzezroczyste tło
-            z-index: 1; // Zapewnia, że lista jest na wierzchu
-            transform: translateX(100%); // Początkowo poza ekranem
-            transition: transform 0.3s ease; // Animacja przesuwania
+            background-color: rgba(37, 43, 70, 0.9);
+            z-index: 1;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
     
         
             &--active {
-                display: flex; // Pokazuje menu kiedy jest aktywne
-                transform: translateX(0); // Przesuwa menu do widoku
+                display: flex;
+                transform: translateX(0);
                 transition: transform 0.3s ease;
                 padding-top: 100px;
             }
@@ -119,11 +128,11 @@
         }
     
         &__item {
-            color: white;
+            color: black;
             padding: 20px 0;
-            width: 370px;
+            width: unset;
             text-transform: uppercase;
-            border-top: 1px solid $grayish;
+            border-top: unset;
             cursor: pointer;
     
             &:last-child {

@@ -4,9 +4,11 @@
   margin: 0 auto;
   text-align: center;
   background-color: whitesmoke;
-  min-width: 375px;
+  // min-width: 375px;
+  // width: 100%;
+  // max-width: 375px;
   width: 100%;
-  max-width: 375px;
+  max-width: 1440px;
   font-family: 'Rubik', sans-serif;
   line-height: 24px;
   display: flex;
@@ -31,7 +33,6 @@
 .logo {
   cursor: pointer;
   pointer-events: none;
-  // opacity: 0;
 }
 
 .button {
@@ -48,6 +49,15 @@
     border: none;
     transition: background-color 0.3s ease;
     color: white;
+    -webkit-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+    -moz-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+    box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+
+    &:hover {
+      background: none;
+      color: $lightBlue;
+      outline: 2px solid $lightBlue;
+    }
   }
 
 // @media (min-width: 768px) {

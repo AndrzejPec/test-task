@@ -71,7 +71,6 @@
         background-color: hsl(231, 69%, 60%);
         color: white;
         flex-direction: column;
-        margin-inline: -#{$desktop-margin};
     
         &__counter {
             text-transform: uppercase;

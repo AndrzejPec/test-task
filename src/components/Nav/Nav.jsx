@@ -13,20 +13,22 @@ export const Nav = () => {
 
     return (
         <nav className="nav">
-            <div className="nav__logo">
-                <Logo className="logo" />
+            <div className='nav__container'>
+                <div className="nav__logo">
+                    <Logo className="logo" />
+                </div>
+                <div className="nav__hamburger" onClick={toggleMenu}>
+                    {isMenuOpen ? <CloseIcon onClick={toggleMenu}/> : <Hamburger />}
+                </div>
+                <ul className={`nav__list ${isMenuOpen ? 'nav__list--active' : ''}`}>
+                    <li className="nav__item">Features</li>
+                    <li className="nav__item">Pricing</li>
+                    <li className="nav__item">Contact</li>
+                    <li className="nav__item">
+                        <button className="nav__button">Login</button>
+                    </li>
+                </ul>
             </div>
-            <div className="nav__hamburger" onClick={toggleMenu}>
-                {isMenuOpen ? <CloseIcon onClick={toggleMenu}/> : <Hamburger />}
-            </div>
-            <ul className={`nav__list ${isMenuOpen ? 'nav__list--active' : ''}`}>
-                <li className="nav__item">Features</li>
-                <li className="nav__item">Pricing</li>
-                <li className="nav__item">Contact</li>
-                <li className="nav__item">
-                    <button className="nav__button">Login</button>
-                </li>
-            </ul>
         </nav>
     )
 }

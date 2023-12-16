@@ -8,11 +8,12 @@
     margin: 4rem -#{$mobile-margin};
 
     img.right {
-        position: absolute;
-        top: -10%;
-        left: -10%;
-        transform: translate(-50%, -50%);
-        scale: .5;
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      transform: translate(-50%, -50%);
+      scale: .5;
+      display: none;
     }
 
     img.left {
@@ -20,6 +21,7 @@
       left: 40%;
       transform: translate(-50%, -50%);
       scale: .6;
+      display: none;
     }
   
   &--align-right {
@@ -41,8 +43,26 @@
     width: 50%;
     height: 0;
     padding-top: 35%;
-    margin: 4rem -#{$desktop-margin};
-  }
+    margin: 4rem -#{$mobile-margin};
+  
+    img.right {
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        transform: translate(-50%, -50%);
+        scale: .5;
+        display: none;
+    }
+
+    img.left {
+      position: absolute;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      scale: .6;
+      display: none;
+    }}
+
+  
 }
 
 @container (min-width: 700px) {

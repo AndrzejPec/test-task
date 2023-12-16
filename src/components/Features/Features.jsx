@@ -47,26 +47,28 @@ export const Features = ({ livesInsideModal }) => {
 
     return (
         <div className="features">
-            {!livesInsideModal && (
-                <>
-                    <h2>Features</h2>
-                    <p>
-                        Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
-                    </p>
-                </>
-            )}
+            <div className='features__top'>
+                {!livesInsideModal && (
+                    <div className="features__header">
+                        <h2>Features</h2>
+                        <p>
+                            Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+                        </p>
+                    </div>
+                )}
 
-            <ul className="features__list">
-                {tabs.map((tab, index) => (
-                    <li
-                        key={tab.title} 
-                        onClick={() => handleOnClick(index)}
-                        className={`features__link features__link${activeIndex === index ? '--active' : ''}`}
-                    >
-                        {tab.title}
-                    </li>
-                ))}
-            </ul>
+                <ul className="features__list">
+                    {tabs.map((tab, index) => (
+                        <li
+                            key={tab.title} 
+                            onClick={() => handleOnClick(index)}
+                            className={`features__link features__link${activeIndex === index ? '--active' : ''}`}
+                        >
+                            {tab.title}
+                        </li>
+                    ))}
+                </ul>
+            </div>
 
             <div className="features__content">
                 <Illustration

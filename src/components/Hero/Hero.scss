@@ -21,17 +21,38 @@
         justify-content: space-around;
     }
 
-    &__button--light {
-        color: $darkBlue;
-        background-color: #F7F7F7;
+    &__button {
+        color: white;
+        background-color: $lightBlue;
         -webkit-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
         -moz-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
         box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+
+        &:hover {
+            background: none;
+            color: $lightBlue;
+            outline: 2px solid $lightBlue;
+        }
+
+        &--light {
+            color: $grayish;
+            background-color: #F7F7F7;
+            -webkit-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+            -moz-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+            box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+
+            &:hover {
+                background: none;
+                color: $grayish;
+                outline: 2px solid $grayish;
+            }
+        }
     }
 }
 
 @media (min-width: $breakpoint) {
     .hero {
+        text-align: left;
 
         &__content {
             display: flex;
@@ -59,10 +80,6 @@
             display: flex;
             gap: 20px;
             justify-content: space-around;
-        }
-    
-        &__button--light {
-            background-color: burlywood;
         }
     }
 }
