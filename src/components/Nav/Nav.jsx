@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ReactComponent as Logo } from '../../img/logo-bookmark.svg';
 import { ReactComponent as Hamburger } from '../../img/icon-hamburger.svg';
-import { ReactComponent as CloseIcon } from '../../img/icon-close.svg'; // Upewnij się, że dodałeś tę ikonę
+import { ReactComponent as CloseIcon } from '../../img/icon-close.svg';
 import './Nav.scss';
 
 export const Nav = () => {

@@ -1,12 +1,21 @@
+@import '../../styles/variables.scss';
+
 .download-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding-block: 1rem;
     border: 1px solid black;
     background-color: white;
 
     &__img {
         width: 100px;
+    }
+}
+
+@media (min-width: $breakpoint) {
+    .download-card {
+        // flex-direction: row;
     }
 }

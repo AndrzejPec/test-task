@@ -8,14 +8,16 @@ export const Footer = () => {
 
     return (
         <div className="footer">
-            <div className="footer__logo">
-                <Logo className="logo" />
+            <div className='footer__nav'>
+                <div className="footer__logo">
+                    <Logo className="logo" />
+                </div>
+                <ul className='footer__list'>
+                    <li className="footer__link">Features</li>
+                    <li className="footer__link">Pricing</li>
+                    <li className="footer__link">Contact</li>
+                </ul>
             </div>
-            <ul className='footer__list'>
-                <li className="footer__link">Features</li>
-                <li className="footer__link">Pricing</li>
-                <li className="footer__link">Contact</li>
-            </ul>
             <div className='footer__social'>
                 <img src={facebook} alt="Facebook"></img>
                 <img src={twitter} alt="Twitter"></img>

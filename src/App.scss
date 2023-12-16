@@ -4,8 +4,8 @@
   margin: 0 auto;
   text-align: center;
   background-color: whitesmoke;
-  max-width: 375px;
-  width: 100%;
+  min-width: 375px;
+  width: 100dvw;
   font-family: 'Rubik', sans-serif;
   line-height: 24px;
   display: flex;
@@ -28,7 +28,9 @@
 }
 
 .logo {
-  height: 50px;
+  cursor: pointer;
+  pointer-events: none;
+  // opacity: 0;
 }
 
 .button {

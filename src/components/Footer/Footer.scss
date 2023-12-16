@@ -11,6 +11,11 @@
     color: white;
     margin-inline: -#{$mobile-margin};
 
+    &__nav {
+        display: flex;
+        gap: 6rem;
+    }
+
     &__logo svg path g {
         height: 20px;
         margin-bottom: 20px;
@@ -42,14 +47,11 @@
     fill: white;
 }
 
-.logo {
-    fill: white;
-}
-
 @media (min-width: $breakpoint) {
     .footer {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-evenly;
         padding: 20px 0;
         gap: 10px;
         height: 100%;
@@ -59,29 +61,33 @@
         margin-inline: -#{$desktop-margin};
     
         &__logo svg path g {
-            height: 20px;
-            margin-bottom: 20px;
+
         }
     
         &__list {
             color: white;
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            flex-direction: row;
+            gap: 6rem;
         }
     
         &__link {
+            cursor: pointer;
             display: flex;
             align-items: center;
             flex-direction: column;
             color: white;
             text-transform: uppercase;
+
+            &:hover {
+                color: $lightRed;
+            }
         }
     
         &__social {
-            margin-top: 20px;
+            margin-top: unset;
             display: flex;
-            gap: 20px;
+            gap: 5rem;
         }
     }
     
