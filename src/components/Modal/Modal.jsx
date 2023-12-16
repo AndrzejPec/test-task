@@ -27,11 +27,11 @@ export const Modal = () => {
     window.addEventListener('mousemove', handleMouseMove);
     closeModalButton.addEventListener('click', closeModal);
 
-    const timer = setTimeout(openModal, 30000);
+    // const timer = setTimeout(openModal, 30000);
 
     return () => {
       closeModalButton.removeEventListener('click', closeModal);
-      clearTimeout(timer);
+      // clearTimeout(timer);
     };
   }, []);
 

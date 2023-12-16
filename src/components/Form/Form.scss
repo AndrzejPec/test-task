@@ -3,8 +3,7 @@
 .form {
     display: flex;
     gap: 20px;
-    padding: 30px;
-    height: 300px;
+    padding: 4rem 2rem 2rem;
     background-color: hsl(231, 69%, 60%);
     color: white;
     flex-direction: column;
@@ -12,6 +11,7 @@
 
     &__counter {
         text-transform: uppercase;
+        letter-spacing: .3ch;
     }
 
     &__title {

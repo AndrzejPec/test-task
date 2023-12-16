@@ -20,16 +20,20 @@ export const Form = () => {
       return () => clearInterval(interval); // Oczyść interwał przy demontażu komponentu
   }, []);
   
-
-    const [email, setEmail] = useState('');
-    const [emailError, setEmailError] = useState('');
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [hasSubmitted, setHasSubmitted] = useState(false);
       
-    const handleEmailChange = (e) => {
+  const handleEmailChange = (e) => {
         setEmail(e.target.value);
-        if (!e.target.value) {
-            setEmailError('Email is required');
-        } else if (!/\S+@\S+\.\S+/.test(e.target.value)) {
-            setEmailError(`Whoops! Make sure it's an email :)`);
+        if (hasSubmitted) {
+            if (!e.target.value) {
+                setEmailError('Email is required');
+            } else if (!/\S+@\S+\.\S+/.test(e.target.value)) {
+                setEmailError(`Whoops! Make sure it's an email :)`);
+            } else {
+                setEmailError('');
+            }
         } else {
             setEmailError('');
         }
@@ -37,12 +41,13 @@ export const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setHasSubmitted(true);
         if (!email) {
             setEmailError('Email is required');
-        } else if (!email.includes('@')) {
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
             setEmailError(`Whoops! Make sure it's an email :)`);
         } else {
-          // handle form submission
+            setEmailError('');
         }
     };
     
