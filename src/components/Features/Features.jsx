@@ -79,7 +79,7 @@ export const Features = ({ livesInsideModal, showbutton }) => {
                 />
                 <div className="features__text-area">
                     {tabs[activeIndex].content}
-                    {showbutton && <button className="button">More Info</button>}
+                    <button className="button features__button">More Info</button>
                 </div>
             </div>
         </div>

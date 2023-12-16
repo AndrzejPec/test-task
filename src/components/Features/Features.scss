@@ -16,6 +16,10 @@
         &:first-of-type {
             border-top: 1px solid;
         }
+
+        &:last-of-type {
+            margin-bottom: 3rem;
+        }
     
         &::after {
             content: '';
@@ -38,12 +42,17 @@
     &__content {
         display: flex;
         justify-content: space-between;
-        gap: 25px;
+        gap: 3rem;
         flex-direction: column;
     }
 
     &__text-area {
         display: flex;
+        flex-direction: column;
+    }
+
+    &__button {
+        display: none;
     }
 }
 
@@ -70,6 +79,10 @@
         
             &:first-of-type {
                 border-top: unset;
+            }
+
+            &:last-of-type {
+                margin-bottom: unset;
             }
         
             &::after {
@@ -103,6 +116,10 @@
             justify-content: center;
             width: 50ch;
             align-items: flex-start;
+        }
+
+        &__button {
+            display: unset;
         }
     }
 }

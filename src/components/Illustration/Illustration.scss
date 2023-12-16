@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .illustration {
-    width: 75%;
+    width: 90%;
     background-color: hsl(231, 69%, 60%);
     height: 250px;
     position: relative;
@@ -28,7 +28,7 @@
 
 }
 
-@media (min-width: 1000px) {
+@media (min-width: $breakpoint) {
   .illustration {
     width: 50%;
     height: 0;
