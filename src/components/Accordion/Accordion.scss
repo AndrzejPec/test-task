@@ -1,6 +1,9 @@
 @import '../../styles/variables';
 
 .accordion__item {
+    &:first-of-type {
+      margin-top: 3rem;
+    }
     .accordion__title {
       display: flex;
       justify-content: space-between;
@@ -27,4 +30,3 @@
       }
     }
   }
-  

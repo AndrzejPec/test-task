@@ -38,13 +38,14 @@ export const FAQ = () => {
                 <Accordion
                     key={item.title}
                     title={item.title}
+                    className
                     isActive={index === activeIndex}
                     onClick={() => toggleAccordion(index)}
                 >
                     <p>{item.content}</p>
                 </Accordion>
             ))}
-            <button className='button'>More Info</button>
+            <button className='button faq__button'>More Info</button>
         </div>
     )
 }
