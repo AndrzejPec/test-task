@@ -5,7 +5,7 @@ import illustrationTab1 from '../../img/illustration-features-tab-1.svg';
 import illustrationTab2 from '../../img/illustration-features-tab-2.svg';
 import illustrationTab3 from '../../img/illustration-features-tab-3.svg';
 
-export const Features = ({ livesInsideModal }) => {
+export const Features = ({ livesInsideModal, showbutton }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const tabs = [
@@ -79,7 +79,7 @@ export const Features = ({ livesInsideModal }) => {
                 />
                 <div className="features__text-area">
                     {tabs[activeIndex].content}
-                    {livesInsideModal && <button className="button">More Info</button>}
+                    {showbutton && <button className="button">More Info</button>}
                 </div>
             </div>
         </div>

@@ -5,3 +5,9 @@
 p {
     text-align: start;
 }
+
+@media (min-width: 768px) {
+    .faq {
+        align-self: center;
+    }
+}

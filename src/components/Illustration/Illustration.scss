@@ -1,9 +1,11 @@
+@import '../../styles/variables';
+
 .illustration {
     width: 75%;
     background-color: hsl(231, 69%, 60%);
     height: 250px;
     position: relative;
-    margin: 0 -30px;
+    margin: 0 -#{$mobile-margin};
 
     img {
         position: absolute;
@@ -26,8 +28,11 @@
 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 1000px) {
   .illustration {
-    width: 100%;
+    width: 50%;
+    height: 0;
+    padding-top: 35%;
+    margin: 0 -#{$desktop-margin};
   }
 }

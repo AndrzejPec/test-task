@@ -59,3 +59,72 @@
         background-color: hsl(0, 94%, 66%);
     }
 }
+
+@media (min-width: 768px) {
+    .form {
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+        height: 300px;
+        background-color: hsl(231, 69%, 60%);
+        color: white;
+        flex-direction: column;
+        margin-inline: -30px;
+    
+        &__counter {
+            text-transform: uppercase;
+        }
+    
+        &__title {
+            font-weight: 400;
+        }
+    
+        &__body {
+            display: flex;
+            gap: 20px;
+            flex-direction: row;
+            position: relative;
+            align-self: center;
+            justify-content: space-evenly;
+            width: 50%;
+            height: 4em;
+        }
+    
+        &__input {
+            border: none;
+            padding: 20px;
+            border-radius: 4px;
+            position: relative;
+            outline: none;
+            box-shadow: none;
+            width: 400px;
+    
+            &--error {
+                border: 2px solid hsl(0, 94%, 66%);
+                z-index: 2;
+            }
+        }
+    
+        &__error {
+          display: block;
+          color: white;
+          background-color: hsl(0, 94%, 66%);
+          border-radius: .25em;
+          position: absolute; // Aby wyświetlał się nad pozostałymi elementami
+          top: 4.5em; // Dostosuj odstęp od inputa
+          padding-top: 5px;
+          padding-left: 10px;
+          left: 3em;
+          width: 400px;
+          text-align: left;
+          z-index: 1;
+          font-style: italic;
+          font-size: smaller;
+        }
+    
+        &__button {
+            border: none;
+            background-color: hsl(0, 94%, 66%);
+        }
+    }
+}

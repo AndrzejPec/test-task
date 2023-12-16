@@ -73,3 +73,74 @@
         outline: auto;
     }
 }
+
+@media (min-width: 768px) {
+    .nav {
+        padding-inline: 30px;
+        text-align: initial;
+        position: unset;
+    
+        &__logo {
+            transform: scale(1.2);
+        }
+    
+        &__hamburger {
+            display: none;
+        }
+    
+        &__list {
+            list-style-type: none; // Usuwa domyślne style listy
+            margin: 0;
+            padding: 0;
+            display: none; // Domyślnie ukrywa menu
+            flex-direction: column; // Elementy listy ułożone pionowo
+            align-items: center; // Centruje elementy w poziomie
+            position: fixed;
+            text-align: center;
+            letter-spacing: 2.5px;
+            top: 0;
+            right: 0;
+            height: 100dvh;
+            width: 100%;
+            background-color: rgba(37, 43, 70, 0.9); // Półprzezroczyste tło
+            z-index: 1; // Zapewnia, że lista jest na wierzchu
+            transform: translateX(100%); // Początkowo poza ekranem
+            transition: transform 0.3s ease; // Animacja przesuwania
+    
+        
+            &--active {
+                display: flex; // Pokazuje menu kiedy jest aktywne
+                transform: translateX(0); // Przesuwa menu do widoku
+                transition: transform 0.3s ease;
+                padding-top: 100px;
+            }
+    
+        }
+    
+        &__item {
+            color: white;
+            padding: 20px 0;
+            width: 370px;
+            text-transform: uppercase;
+            border-top: 1px solid $grayish;
+            cursor: pointer;
+    
+            &:last-child {
+                padding-top: 30px;
+            }
+        }
+    
+        &__button {
+            width: 100%;
+            padding-block: 15px;
+            text-transform: uppercase;
+            font: unset;
+            color: unset;
+            cursor: unset;
+            letter-spacing: unset;
+            border-radius: 5px;
+            background: none;
+            outline: auto;
+        }
+    }
+  }

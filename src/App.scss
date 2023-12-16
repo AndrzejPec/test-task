@@ -46,6 +46,22 @@
     transition: background-color 0.3s ease;
     color: white;
   }
+
+@media (min-width: 768px) {
+  .App {
+    margin: 0 auto;
+    text-align: center;
+    background-color: whitesmoke;
+    max-width: 1440px;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding: 0 $desktop-margin;
+  }
+}
 // .App-logo {
 //   height: 40vmin;
 //   pointer-events: none;
