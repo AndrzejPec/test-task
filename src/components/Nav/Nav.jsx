@@ -14,7 +14,7 @@ export const Nav = () => {
     return (
         <nav className="nav">
             <div className="nav__logo">
-                <Logo className="logo" height="50px"/>
+                <Logo className="logo" />
             </div>
             <div className="nav__hamburger" onClick={toggleMenu}>
                 {isMenuOpen ? <CloseIcon onClick={toggleMenu}/> : <Hamburger />}

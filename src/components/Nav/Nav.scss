@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
 .nav {
+    margin-top: 2rem;
     padding-inline: $mobile-margin;
     text-align: initial;
     position: relative; // Dodaj to dla pozycjonowania absolutnego hamburgera
@@ -10,6 +11,7 @@
     }
 
     &__hamburger {
+        transform: scale(1.2);
         position: absolute; // Pozycjonuje hamburgera
         top: 50%; // Centruje pionowo
         right: 0; // Odstęp od prawej krawędzi
