@@ -5,6 +5,7 @@
     &__content {
         display: flex;
         flex-direction: column;
+        gap: 3rem;
     }
 
     &__header {
@@ -21,7 +22,11 @@
     }
 
     &__button--light {
-        background-color: burlywood;
+        color: $darkBlue;
+        background-color: #F7F7F7;
+        -webkit-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+        -moz-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+        box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
     }
 }
 

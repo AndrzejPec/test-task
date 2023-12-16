@@ -7,11 +7,10 @@ export const Hero = () => {
         <div className="hero">
             <div className="hero__content">
                 <Illustration
-                    align={'right'}
+                    align="right"
                     src={illustration}
-                    alt="Hero image"
-                    width={25}
-                    height={25}
+                    description="Hero image"
+                    name="hero"
                 />
                 <div className="hero__text">
                     <h1 className="hero__header">A Simple Bookmark Manager</h1>
