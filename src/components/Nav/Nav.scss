@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .nav {
-    padding-inline: 30px;
+    padding-inline: $mobile-margin;
     text-align: initial;
     position: relative; // Dodaj to dla pozycjonowania absolutnego hamburgera
 
@@ -76,7 +76,7 @@
 
 @media (min-width: $breakpoint) {
     .nav {
-        padding-inline: 30px;
+        padding-inline: $desktop-margin;
         text-align: initial;
         position: unset;
     
@@ -92,7 +92,6 @@
             list-style-type: none; // Usuwa domyślne style listy
             margin: 0;
             padding: 0;
-            display: none; // Domyślnie ukrywa menu
             flex-direction: column; // Elementy listy ułożone pionowo
             align-items: center; // Centruje elementy w poziomie
             position: fixed;

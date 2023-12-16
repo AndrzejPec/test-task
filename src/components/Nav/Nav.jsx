@@ -20,7 +20,6 @@ export const Nav = () => {
                 {isMenuOpen ? <CloseIcon onClick={toggleMenu}/> : <Hamburger />}
             </div>
             <ul className={`nav__list ${isMenuOpen ? 'nav__list--active' : ''}`}>
-                {/* Menu items, ukryte jeśli menu nie jest otwarte */}
                 <li className="nav__item">Features</li>
                 <li className="nav__item">Pricing</li>
                 <li className="nav__item">Contact</li>
