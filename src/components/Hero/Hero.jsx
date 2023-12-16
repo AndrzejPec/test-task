@@ -12,7 +12,7 @@ export const Hero = () => {
                 width={25}
                 height={25}
             />
-            <h1>A Simple Bookmark Manager</h1>
+            <h1 className="hero__header">A Simple Bookmark Manager</h1>
             <p>
                 A clean and simple interface to organize your favourite websites.
                 Open a new browser tab and see your favorite sites load instantly. Try it out for free.

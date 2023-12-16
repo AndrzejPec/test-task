@@ -13,56 +13,18 @@
   font-size: 18px;
   padding: 0 30px;
 
-  h1 {
-    font-weight: 500;
-    color: black;
-    font-size: 40px;
-    line-height: normal;
-  }
-
   h2 {
     font-weight: 500;
     font-size: 32px;
     line-height: normal;
   }
 
-  h3 {
-    font-size: 20px;
-    color: hsl(229, 8%, 60%);
-    line-height: normal;
-    padding: 20px;
-    border-bottom: 1px solid;
-    position: relative;
-    cursor: pointer;
-
-    &:first-of-type {
-      border-top: 1px solid;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -1px; // Położenie tuż pod tekstem
-      left: 0;
-      right: 0;
-      height: 3px; // Grubość kładki
-      background-color: $lightRed; // Kolor kładki
-      transform: scaleX(0); // Zaczyna niewidoczne
-      transition: transform 0.3s ease-in-out; // Animacja rozciągania
-    }
-
-    &:hover::after,
-    &.active::after {
-      transform: scaleX(0.5);
-    }
-  }
-
   p {
     color: $grayish;
     margin: 20px 0 30px;
     line-height: 1.5;
+    text-align: start;
   }
-  
 }
 
 .logo {

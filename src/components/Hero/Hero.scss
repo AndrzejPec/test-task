@@ -3,6 +3,13 @@
     flex-direction: column;
     gap: 30px;
 
+    &__header {
+        font-weight: 500;
+        color: black;
+        font-size: 40px;
+        line-height: normal;
+    }
+
     &__buttons {
         display: flex;
         gap: 20px;
