@@ -68,14 +68,20 @@ export const Features = ({ livesInsideModal }) => {
                 ))}
             </ul>
 
-            <Illustration
-                align={'left'}
-                src={tabs[activeIndex].illustration}
-                alt="Features illustration"
-                width={25}
-                height={25}
-            />
-            {tabs[activeIndex].content}
+            <div className="features__content">
+                <Illustration
+                    align={'left'}
+                    src={tabs[activeIndex].illustration}
+                    alt="Features illustration"
+                    width={25}
+                    height={25}
+                    livesInsideModal={livesInsideModal}
+                />
+                <div className="features__text-area">
+                    {tabs[activeIndex].content}
+                    {livesInsideModal && <button className="button">More Info</button>}
+                </div>
+            </div>
         </div>
     );
 }

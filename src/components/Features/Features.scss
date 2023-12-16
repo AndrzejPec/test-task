@@ -1,10 +1,5 @@
 @import '../../styles/variables.scss';
-
-@container (max-width: 700px) {
-    .features__link {
-      font-size: 2em;
-    }
-}
+@import '../Modal/Modal.scss';
 
 .features {
     padding: 200px 0;
@@ -39,10 +34,31 @@
             transform: scaleX(0.5);
         }
     }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        flex-direction: column;
+    }
+
+    &__text-area {
+        display: flex;
+    }
 }
 
-// @media (min-width: 1000px) {
-//     .features h3 {
-//         display: inline;
-//     }
-// }
+@container (min-width: 700px) {
+    .features {
+        padding: 10px 0;
+
+        &__content {
+            flex-direction: unset;
+        }
+
+        &__text-area {
+            flex-direction: column;
+        }
+    }
+
+    
+}

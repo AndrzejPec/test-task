@@ -1,4 +1,5 @@
 import './Illustration.scss';
+import '../../App.scss';
 
 export const Illustration = ({ align, src }) => {
     return (
