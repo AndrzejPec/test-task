@@ -1,7 +1,6 @@
 @import '../../styles/variables';
 
 .accordion__item {
-    // Style dla całego elementu akordeonu
     .accordion__title {
       display: flex;
       justify-content: space-between;
@@ -10,13 +9,7 @@
       padding: 20px 0;
       border-bottom: 1px solid $grayish;
   
-      // Style dla h3 i ikony strzałki...
-      h3 {
-        // Style dla h3
-      }
-  
       .accordion__icon {
-        // Opcjonalne: Możesz dodać style dla ikony, jeśli potrzebujesz
         transition: transform 0.3s ease;
       }
     }
@@ -30,12 +23,8 @@
       transition: max-height 0.3s ease;
   
       &.active {
-        max-height: 500px; // Przykład maksymalnej wysokości, dostosuj do swoich potrzeb
+        max-height: 500px;
       }
-  
-    //   &.active .accordion__content-inner {
-    //     padding: 1em; // Przykład paddingu, dostosuj do swoich potrzeb
-    //   }
     }
   }
   

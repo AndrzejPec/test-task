@@ -1,13 +1,15 @@
+@import '../../styles/variables';
+
 .footer {
     display: flex;
     flex-direction: column;
-    margin-inline: -30px;
     padding: 20px 0;
     gap: 10px;
     height: 100%;
     background-color: hsl(229, 31%, 21%);
     align-items: center;
     color: white;
+    margin-inline: -#{$mobile-margin};
 
     &__logo svg path g {
         height: 20px;
@@ -42,4 +44,52 @@
 
 .logo {
     fill: white;
+}
+
+@media (min-width: $breakpoint) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 10px;
+        height: 100%;
+        background-color: hsl(229, 31%, 21%);
+        align-items: center;
+        color: white;
+        margin-inline: -#{$desktop-margin};
+    
+        &__logo svg path g {
+            height: 20px;
+            margin-bottom: 20px;
+        }
+    
+        &__list {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        &__link {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-transform: uppercase;
+        }
+    
+        &__social {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+    }
+    
+    .footer__logo svg g path {
+        fill: white;
+    }
+    
+    .logo {
+        fill: white;
+    }
 }

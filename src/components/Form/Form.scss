@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .form {
     display: flex;
     gap: 20px;
@@ -6,7 +8,7 @@
     background-color: hsl(231, 69%, 60%);
     color: white;
     flex-direction: column;
-    margin-inline: -30px;
+    margin-inline: -#{$mobile-margin};
 
     &__counter {
         text-transform: uppercase;
@@ -60,7 +62,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint) {
     .form {
         display: flex;
         gap: 20px;
@@ -69,7 +71,7 @@
         background-color: hsl(231, 69%, 60%);
         color: white;
         flex-direction: column;
-        margin-inline: -30px;
+        margin-inline: -#{$desktop-margin};
     
         &__counter {
             text-transform: uppercase;

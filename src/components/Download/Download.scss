@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .download {
     display: flex;
     flex-direction: column;
@@ -11,7 +13,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint) {
     .download {
         display: flex;
         flex-direction: column;
