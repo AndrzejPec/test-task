@@ -6,10 +6,6 @@
     text-align: initial;
     position: relative;
 
-    &__logo {
-        transform: scale(1.2);
-    }
-
     &__hamburger {
         transform: scale(1.2);
         position: absolute;
@@ -140,3 +136,7 @@
         }
     }
   }
+
+.nav__logo svg g path{
+    z-index: 2;
+}

@@ -14,7 +14,7 @@ export const Nav = () => {
     return (
         <nav className="nav">
             <div className='nav__container'>
-                <div className="nav__logo">
+                <div className={`nav__logo ${isMenuOpen ? 'nav__logo--active' : ''}`}>
                     <Logo className="logo" />
                 </div>
                 <div className="nav__hamburger" onClick={toggleMenu}>

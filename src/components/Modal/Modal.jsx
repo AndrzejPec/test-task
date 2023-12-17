@@ -39,7 +39,7 @@ export const Modal = () => {
     <>
       <dialog id="myModal">
 
-        <button className="button" id="closeModal">Close</button>
+        <button className="button myModal__button" id="closeModal">Close</button>
 
         <Features livesInsideModal={true} />
 

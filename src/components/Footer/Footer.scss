@@ -9,7 +9,7 @@
     background-color: $darkBlue;
     align-items: center;
     color: white;
-    margin-inline: -#{$mobile-margin};
+    // margin-inline: -#{$mobile-margin};
 
     &__nav {
         display: flex;
@@ -17,8 +17,13 @@
         gap: 3rem;
     }
 
+    &__logo {
+        cursor: pointer;
+    }
+
     &__logo svg path g {
         fill: white;
+        cursor: pointer;
     }
 
     &__list {

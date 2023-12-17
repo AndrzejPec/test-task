@@ -13,4 +13,12 @@ $desktop: 1440px;
 $mobile-margin: 30px;
 $desktop-margin: 200px;
 
-$button-height: 4rem;
+$input-height: 1rem;
+$input-padding: 1.25rem;
+
+@mixin responsive-width {
+    width: clamp(20rem, 50%, 50ch);
+    align-self: center;
+    margin: 0 auto;
+}
+

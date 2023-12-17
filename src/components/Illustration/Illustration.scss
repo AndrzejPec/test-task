@@ -5,7 +5,7 @@
     background-color: hsl(231, 69%, 60%);
     height: 250px;
     position: relative;
-    margin: 4rem -#{$mobile-margin};
+    // margin: 4rem -#{$mobile-margin};
 
     img.right {
       // position: absolute;
@@ -28,12 +28,18 @@
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     align-self: flex-end;
+    margin-right: -5rem;
+    height: 0;
+    padding-top: 60%;
   }
   
   &--align-left{
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     align-self: flex-start;
+    margin-left: -5rem;
+    height: 0;
+    padding-top: 60%;
   }
 
 }
