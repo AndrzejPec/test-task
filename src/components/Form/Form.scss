@@ -35,7 +35,7 @@
         height: 1rem;
 
         &--error {
-            border: 2px solid hsl(0, 94%, 66%);
+            border: 2px solid $lightRed;
             z-index: 2;
         }
     }
@@ -43,10 +43,10 @@
     &__error {
       display: block;
       color: white;
-      background-color: hsl(0, 94%, 66%);
+      background-color: $lightRed;
       border-radius: .25em;
-      position: absolute; // Aby wyświetlał się nad pozostałymi elementami
-      top: 50px; // Dostosuj odstęp od inputa
+      position: absolute;
+      top: 50px;
       padding-top: 5px;
       padding-left: 10px;
       left: 0;
@@ -73,27 +73,12 @@
 
 @media (min-width: $breakpoint) {
     .form {
-        display: flex;
-        gap: 20px;
         padding: 30px;
         height: 300px;
         background-color: $lightBlue;
-        color: white;
-        flex-direction: column;
-    
-        &__counter {
-            text-transform: uppercase;
-        }
-    
-        &__title {
-            font-weight: 400;
-        }
     
         &__body {
-            display: flex;
-            gap: 20px;
             flex-direction: row;
-            position: relative;
             align-self: center;
             justify-content: space-evenly;
             width: 50%;
@@ -101,40 +86,13 @@
         }
     
         &__input {
-            border: none;
-            padding: 20px;
-            border-radius: 4px;
-            position: relative;
-            outline: none;
-            box-shadow: none;
             width: 400px;
-    
-            &--error {
-                border: 2px solid hsl(0, 94%, 66%);
-                z-index: 2;
-            }
         }
     
         &__error {
-          display: block;
-          color: white;
-          background-color: hsl(0, 94%, 66%);
-          border-radius: .25em;
-          position: absolute;
           top: 4.5em;
-          padding-top: 5px;
-          padding-left: 10px;
           left: 3em;
           width: 400px;
-          text-align: left;
-          z-index: 1;
-          font-style: italic;
-          font-size: smaller;
-        }
-    
-        &__button {
-            border: none;
-            background-color: hsl(0, 94%, 66%);
         }
     }
 }
