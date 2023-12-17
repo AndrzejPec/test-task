@@ -33,7 +33,9 @@
         outline: none;
         box-shadow: none;
         min-height: $input-height;
-        @include responsive-width;
+        width: clamp(200px, 75%, 500px);
+        margin: 0 auto;
+        border-bottom: 10px solid $lightRed;
 
         &::placeholder {
             color: $grayish;
@@ -67,8 +69,8 @@
         background-color: $lightRed;
         max-height: 1rem;
         box-sizing: content-box;
-        @include responsive-width;
-        max-width: 42ch;
+        width: clamp(200px, 75%, 500px);
+        margin: 0 auto;
 
         &:hover {
             background-color: whitesmoke;
