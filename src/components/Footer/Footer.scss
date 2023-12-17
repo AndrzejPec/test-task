@@ -18,7 +18,6 @@
     }
 
     &__logo svg path g {
-        cursor: pointer;
         fill: white;
     }
 
@@ -54,6 +53,8 @@
 }
 
 .footer__logo svg g path {
+    cursor: pointer;
+    fill: white;
 }
 
 @media (min-width: $breakpoint) {

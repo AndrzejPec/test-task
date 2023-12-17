@@ -24,9 +24,10 @@
 
   p {
     color: $grayish;
-    margin: 20px 0 30px;
+    margin: 20px auto 30px;
     line-height: 1.5;
     max-width: 50ch;
+    align-self: center;
   }
 }
 

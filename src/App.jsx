@@ -10,7 +10,7 @@ import { FAQ } from './components/FAQ/FAQ';
 import { Form } from './components/Form/Form';
 import { Footer } from './components/Footer/Footer';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       
@@ -20,7 +20,7 @@ function App() {
 
         <Hero />
 
-        <Features showbutton />
+        <Features />
 
         <Download />
 
@@ -29,8 +29,7 @@ function App() {
         <Form />
 
         <Footer />
+
     </div>
   );
 }
-
-export default App;
