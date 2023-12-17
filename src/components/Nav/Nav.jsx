@@ -25,7 +25,7 @@ export const Nav = () => {
                     <li className="nav__item">Pricing</li>
                     <li className="nav__item">Contact</li>
                     <li className="nav__item">
-                        <button className="nav__button">Login</button>
+                        <button className="button nav__button">Login</button>
                     </li>
                 </ul>
             </div>

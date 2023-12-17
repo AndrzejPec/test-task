@@ -87,11 +87,12 @@
         &__container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
         }
     
         &__logo {
-            transform: scale(1.2);
+            transform: scale(1.2) translateX(200px);
+            margin-right: 30%;
         }
     
         &__hamburger {
@@ -128,29 +129,40 @@
         }
     
         &__item {
-            color: black;
-            padding: 20px 0;
+            color: $darkBlue;
+            padding: 0;
             width: unset;
             text-transform: uppercase;
             border-top: unset;
             cursor: pointer;
-    
+            
+            &:hover {
+                color: $lightRed;
+            }
+
             &:last-child {
-                padding-top: 30px;
+                padding-top: unset;
             }
         }
     
         &__button {
             width: 100%;
             padding-block: 15px;
+            min-width: 10rem;
             text-transform: uppercase;
             font: unset;
-            color: unset;
+            color: white;
+            background-color: $lightRed;
             cursor: unset;
             letter-spacing: unset;
             border-radius: 5px;
-            background: none;
-            outline: auto;
+            outline: none;
+
+            &:hover {
+                background: none;
+                color: $lightRed;
+                outline: 2px solid $lightRed;
+            }
         }
     }
   }

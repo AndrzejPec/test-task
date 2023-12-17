@@ -3,6 +3,8 @@ import facebook from '../../img/icon-facebook.svg';
 import twitter from '../../img/icon-twitter.svg';
 
 import { ReactComponent as Logo } from '../../img/logo-bookmark.svg';
+import { ReactComponent as FB } from '../../img/icon-facebook.svg';
+import { ReactComponent as Twitter } from '../../img/icon-twitter.svg';
 
 export const Footer = () => {
 
@@ -19,8 +21,8 @@ export const Footer = () => {
                 </ul>
             </div>
             <div className='footer__social'>
-                <img src={facebook} alt="Facebook"></img>
-                <img src={twitter} alt="Twitter"></img>
+                <FB />
+                <Twitter />
             </div>
         </div>
     )

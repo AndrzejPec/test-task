@@ -18,8 +18,8 @@
     }
 
     &__logo svg path g {
-        height: 20px;
-        margin-bottom: 20px;
+        cursor: pointer;
+        fill: white;
     }
 
     &__list {
@@ -40,11 +40,15 @@
     &__social {
         display: flex;
         gap: 2rem;
+        cursor: pointer;
+
+        & svg path:hover  {
+            fill: orange;
+        }
     }
 }
 
 .footer__logo svg g path {
-    fill: white;
 }
 
 @media (min-width: $breakpoint) {
@@ -93,6 +97,7 @@
             margin-top: unset;
             display: flex;
             gap: 5rem;
+            
         }
     }
     

@@ -19,6 +19,7 @@
 @media (min-width: $breakpoint) {
     .faq {
         align-self: center;
+        max-width: 50ch;
 
         p {
             text-align: start;

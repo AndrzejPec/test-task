@@ -27,8 +27,7 @@
 
             @for $i from 1 through 5 {
                 > :nth-child(#{$i + 1}) {
-                    margin-top: 2em * $i;
-                    margin-bottom: -2em * $i;
+                    transform: translateY(2em * $i);
                 }
             }
         }
