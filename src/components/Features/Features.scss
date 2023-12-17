@@ -9,20 +9,26 @@
         color: $grayish;
         line-height: normal;
         padding: 20px;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid $grayish;
         position: relative;
         cursor: pointer;
     
         &:first-of-type {
-            border-top: 1px solid;
+            border-top: 1px solid $grayish;
         }
 
         &:last-of-type {
             margin-bottom: 3rem;
         }
+
+        &:hover {
+            color: $lightRed;
+        }
     
         &::after {
             content: '';
+            max-width: 50%;
+            margin: 0 auto;
             position: absolute;
             bottom: -1px;
             left: 0;
@@ -31,6 +37,11 @@
             background-color: $lightRed;
             transform: scaleX(0);
             transition: transform 0.3s ease-in-out;
+        }
+
+        &--active {
+            color: $darkBlue;
+            border-color: unset;
         }
     
         &:hover::after,
@@ -94,6 +105,12 @@
 
             &:last-of-type {
                 margin-bottom: unset;
+            }
+
+            &::after {
+                max-width: unset;
+                min-width: unset;
+                scale: 2;
             }
         }
     
