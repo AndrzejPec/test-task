@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.3343fe08.css",
-    "main.js": "/test-task/static/js/main.e8674429.js",
+    "main.css": "/test-task/static/css/main.eab6f0bf.css",
+    "main.js": "/test-task/static/js/main.921e0dfc.js",
     "static/js/787.4785e9bf.chunk.js": "/test-task/static/js/787.4785e9bf.chunk.js",
     "static/media/illustration-features-tab-3.svg": "/test-task/static/media/illustration-features-tab-3.a4206aab7946773b29b702492d2d014b.svg",
     "static/media/illustration-features-tab-2.svg": "/test-task/static/media/illustration-features-tab-2.e933bd6d921c537d7743e08ea4ec488e.svg",
@@ -18,12 +18,12 @@
     "static/media/logo-opera.svg": "/test-task/static/media/logo-opera.ff14e4763945338fe002017c72e7e597.svg",
     "static/media/icon-hamburger.svg": "/test-task/static/media/icon-hamburger.4385fd507d24f37ccbb3ae359b5c9555.svg",
     "static/media/icon-arrow.svg": "/test-task/static/media/icon-arrow.8174203a5d4fc44f5247b825de6e2158.svg",
-    "main.3343fe08.css.map": "/test-task/static/css/main.3343fe08.css.map",
-    "main.e8674429.js.map": "/test-task/static/js/main.e8674429.js.map",
+    "main.eab6f0bf.css.map": "/test-task/static/css/main.eab6f0bf.css.map",
+    "main.921e0dfc.js.map": "/test-task/static/js/main.921e0dfc.js.map",
     "787.4785e9bf.chunk.js.map": "/test-task/static/js/787.4785e9bf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3343fe08.css",
-    "static/js/main.e8674429.js"
+    "static/css/main.eab6f0bf.css",
+    "static/js/main.921e0dfc.js"
   ]
 }
