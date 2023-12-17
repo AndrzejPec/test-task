@@ -15,15 +15,9 @@
 
 @media (min-width: $breakpoint) {
     .download {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
     
         &__cards {
-            display: flex;
             flex-direction: row;
-            gap: 30px;
 
             @for $i from 1 through 5 {
                 > :nth-child(#{$i + 1}) {

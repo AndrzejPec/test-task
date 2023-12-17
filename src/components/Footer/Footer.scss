@@ -6,7 +6,7 @@
     padding: 20px 0;
     gap: 3rem;
     height: 100%;
-    background-color: hsl(229, 31%, 21%);
+    background-color: $darkBlue;
     align-items: center;
     color: white;
     margin-inline: -#{$mobile-margin};
@@ -30,11 +30,16 @@
     }
 
     &__link {
+        cursor: pointer;
         display: flex;
         align-items: center;
         flex-direction: column;
         color: white;
         text-transform: uppercase;
+
+        &:hover {
+            color: $lightRed;
+        }
     }
 
     &__social {
@@ -53,59 +58,23 @@
 
 @media (min-width: $breakpoint) {
     .footer {
-        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        padding: 20px 0;
         gap: 10px;
-        height: 100%;
-        background-color: hsl(229, 31%, 21%);
-        align-items: center;
-        color: white;
-    
-        &__logo svg path g {
-
-        }
 
         &__nav {
-            display: flex;
             flex-direction: row;
             gap: 6rem;
         }
     
         &__list {
-            color: white;
-            display: flex;
             flex-direction: row;
             gap: 6rem;
         }
     
-        &__link {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            color: white;
-            text-transform: uppercase;
-
-            &:hover {
-                color: $lightRed;
-            }
-        }
-    
         &__social {
             margin-top: unset;
-            display: flex;
             gap: 5rem;
-            
         }
-    }
-    
-    .footer__logo svg g path {
-        fill: white;
-    }
-    
-    .logo {
-        fill: white;
     }
 }

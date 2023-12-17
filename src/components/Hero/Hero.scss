@@ -55,7 +55,6 @@
         text-align: left;
 
         &__content {
-            display: flex;
             flex-direction: row-reverse;
             justify-content: end;
             gap: 100px;
@@ -67,19 +66,6 @@
             align-items: flex-start;
             width: 50ch;
             justify-content: center;
-        }
-    
-        &__header {
-            font-weight: 500;
-            color: black;
-            font-size: 40px;
-            line-height: normal;
-        }
-    
-        &__buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: space-around;
         }
     }
 }

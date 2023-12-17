@@ -6,7 +6,7 @@
 
     &__link {
         font-size: 20px;
-        color: hsl(229, 8%, 60%);
+        color: $grayish;
         line-height: normal;
         padding: 20px;
         border-bottom: 1px solid;
@@ -24,13 +24,13 @@
         &::after {
             content: '';
             position: absolute;
-            bottom: -1px; // Położenie tuż pod tekstem
+            bottom: -1px;
             left: 0;
             right: 0;
-            height: 3px; // Grubość kładki
-            background-color: $lightRed; // Kolor kładki
-            transform: scaleX(0); // Zaczyna niewidoczne
-            transition: transform 0.3s ease-in-out; // Animacja rozciągania
+            height: 3px;
+            background-color: $lightRed;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
         }
     
         &:hover::after,
@@ -85,13 +85,7 @@
         }
     
         &__link {
-            font-size: 20px;
-            color: $grayish;
-            line-height: normal;
-            padding: 20px;
             border-bottom: unset;
-            position: relative;
-            cursor: pointer;
             text-align: center;
         
             &:first-of-type {
@@ -101,35 +95,15 @@
             &:last-of-type {
                 margin-bottom: unset;
             }
-        
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -1px;
-                left: 0;
-                right: 0;
-                height: 3px;
-                background-color: $lightRed;
-                transform: scaleX(0);
-                transition: transform 0.3s ease-in-out;
-            }
-        
-            &:hover::after,
-            &--active::after {
-                transform: scaleX(0.5);
-            }
         }
     
         &__content {
-            display: flex;
             flex-direction: row;
             justify-content: start;
             gap: 100px;
         }
     
         &__text-area {
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             width: 50ch;
             align-items: flex-start;
