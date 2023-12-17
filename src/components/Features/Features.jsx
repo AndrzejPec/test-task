@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+
 import './Features.scss';
+
 import { Illustration } from "../Illustration/Illustration";
+
 import illustrationTab1 from '../../img/illustration-features-tab-1.svg';
 import illustrationTab2 from '../../img/illustration-features-tab-2.svg';
 import illustrationTab3 from '../../img/illustration-features-tab-3.svg';
@@ -46,7 +49,7 @@ export const Features = ({ livesInsideModal }) => {
     };
 
     return (
-        <div className="features">
+        <section className="features">
             <div className='features__top'>
                 {!livesInsideModal && (
                     <>
@@ -84,6 +87,6 @@ export const Features = ({ livesInsideModal }) => {
                     <button className="button features__button">More Info</button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

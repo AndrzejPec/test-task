@@ -27,11 +27,11 @@ export const Modal = () => {
     window.addEventListener('mousemove', handleMouseMove);
     closeModalButton.addEventListener('click', closeModal);
 
-    // const timer = setTimeout(openModal, 30000);
+    const timer = setTimeout(openModal, 30000);
 
     return () => {
       closeModalButton.removeEventListener('click', closeModal);
-      // clearTimeout(timer);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -41,7 +41,7 @@ export const Modal = () => {
 
         <button className="button myModal__button" id="closeModal">Close</button>
 
-        <Features livesInsideModal={true} />
+        <Features livesInsideModal />
 
       </dialog>
     </>

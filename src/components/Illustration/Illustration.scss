@@ -2,10 +2,9 @@
 
 .illustration {
     width: 90%;
-    background-color: hsl(231, 69%, 60%);
+    background-color: $lightBlue;
     height: 250px;
     position: relative;
-    // margin: 4rem -#{$mobile-margin};
 
     img.right {
       position: absolute;
@@ -50,10 +49,6 @@
       position: absolute;
       top: -10%;
       left: -10%;
-      width: 170%;
-    }
-
-    img.left {
     }
   }
 }

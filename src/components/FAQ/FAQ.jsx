@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import './FAQ.scss';
+
 import { Accordion } from '../Accordion/Accordion';
 
 const FAQ_DATA = [
@@ -29,11 +31,13 @@ export const FAQ = () => {
     };
 
     return (
-        <div className="faq">
+        <section className="faq">
+
             <h2>Frequently Asked Questions</h2>
             <p>
                 Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.
             </p>
+
             {FAQ_DATA.map((item, index) => (
                 <Accordion
                     key={item.title}
@@ -45,7 +49,8 @@ export const FAQ = () => {
                     <p>{item.content}</p>
                 </Accordion>
             ))}
+
             <button className='button faq__button'>More Info</button>
-        </div>
+        </section>
     )
 }

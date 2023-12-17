@@ -12,7 +12,7 @@ import { Footer } from './components/Footer/Footer';
 
 export const App = () => {
   return (
-    <div className="App">
+    <main className="App">
       
         <Modal />
 
@@ -30,6 +30,6 @@ export const App = () => {
 
         <Footer />
 
-    </div>
+    </main>
   );
 }

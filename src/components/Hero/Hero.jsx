@@ -1,10 +1,11 @@
-import { Illustration } from "../Illustration/Illustration"
 import './Hero.scss'
+
 import illustration from '../../img/illustration-hero.svg';
+import { Illustration } from "../Illustration/Illustration"
 
 export const Hero = () => {
     return (
-        <div className="hero">
+        <section className="hero">
             <div className="hero__content">
                 <Illustration
                     align="right"
@@ -24,6 +25,6 @@ export const Hero = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
   }

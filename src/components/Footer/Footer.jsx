@@ -1,15 +1,12 @@
 import './Footer.scss';
-import facebook from '../../img/icon-facebook.svg';
-import twitter from '../../img/icon-twitter.svg';
 
 import { ReactComponent as Logo } from '../../img/logo-bookmark.svg';
 import { ReactComponent as FB } from '../../img/icon-facebook.svg';
 import { ReactComponent as Twitter } from '../../img/icon-twitter.svg';
 
 export const Footer = () => {
-
     return (
-        <div className="footer">
+        <footer className="footer">
             <div className='footer__nav'>
                 <div className="footer__logo">
                     <Logo className="logo" />
@@ -24,6 +21,6 @@ export const Footer = () => {
                 <FB />
                 <Twitter />
             </div>
-        </div>
+        </footer>
     )
 }
