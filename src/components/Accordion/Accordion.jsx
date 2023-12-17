@@ -2,7 +2,6 @@ import React from 'react';
 import './Accordion.scss';
 
 import arrow from '../../img/icon-arrow.svg';
-// import { ReactComponent as Arrow } from '../../img/icon-arrow.svg';
 
 export const Accordion = ({ title, isActive, onClick, children }) => {
     return (
