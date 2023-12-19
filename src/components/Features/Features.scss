@@ -136,15 +136,24 @@
 
 @container (min-width: 700px) {
     .features {
-        padding: 10px 0;
         text-align: left;
+
+        p {
+            margin: 20px 0;
+        }
 
         &__content {
             flex-direction: unset;
+            gap: 10%;
+            justify-content: space-between;
         }
 
         &__text-area {
             flex-direction: column;
+        }
+
+        &__top {
+            display: none;
         }
     }
 }
