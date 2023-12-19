@@ -68,7 +68,7 @@
         background-color: $lightRed;
         max-height: 1rem;
         box-sizing: content-box;
-        width: clamp(200px, 75%, 500px);
+        width: clamp(5rem, 20%, 8rem);
         margin: 0 auto;
 
         &:hover {
@@ -89,7 +89,7 @@
             flex-direction: row;
             align-self: center;
             justify-content: space-evenly;
-            width: 50%;
+            @include responsive-width;
             align-items: center;
         }
 
@@ -98,7 +98,7 @@
         }
     
         &__input {
-            width: 15rem;
+            width: clamp(15rem, 75%, 40ch);
         }
     
         &__error {
