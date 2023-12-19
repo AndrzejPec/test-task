@@ -75,6 +75,7 @@
                 width: 50ch;
                 justify-content: center;
                 @include responsive-width;
+                margin-left: 5rem;
             }
     }
 }

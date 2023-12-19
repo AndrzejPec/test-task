@@ -118,12 +118,14 @@
         }
     
         &__content {
+            gap: 6rem;
             flex-direction: row;
             justify-content: start;
         }
     
         &__text-area {
             justify-content: center;
+            margin-right: 5rem;
             width: 50ch;
             align-items: flex-start;
         }

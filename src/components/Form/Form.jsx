@@ -61,16 +61,18 @@ export const Form = () => {
 
             <form onSubmit={handleSubmit} className="form__body">
 
-                <input
-                    type="text"
-                    placeholder="Enter your email address"
-                    id="emailInput"
-                    className={`form__input form__input${emailError ? '--error' : ''}`}
-                    value={email}
-                    onChange={handleEmailChange}
-                />
+                <div className='form__input-wrapper'>
+                    <input
+                        type="text"
+                        placeholder="Enter your email address"
+                        id="emailInput"
+                        className={`form__input form__input${emailError ? '--error' : ''}`}
+                        value={email}
+                        onChange={handleEmailChange}
+                    />
 
-                {emailError && <span className="form__error">{emailError}</span>}
+                    {emailError && <span className="form__error">{emailError}</span>}
+                </div>
 
                 <button className="form__button button" type="submit">Contact us</button>
 

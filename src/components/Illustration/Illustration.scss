@@ -9,7 +9,7 @@
     img.right {
       position: absolute;
       top: -10%;
-      width: clamp(15rem, 100%, 50ch);
+      width: clamp(15rem, 100%, 60ch);
       left: -15%;
     }
 
@@ -42,12 +42,19 @@
   .illustration {
     width: 50%;
     height: 0;
-    padding-top: 35%;
+    padding-top: 30%;
   
     img.right {
       position: absolute;
       top: -10%;
       left: -10%;
+    }
+
+    img.left {
+      position: absolute;
+      width: 70%;
+      right: -5%;
+      top: -10%;
     }
   }
 }
