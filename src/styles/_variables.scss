@@ -21,3 +21,9 @@ $input-padding: 1.25rem;
     align-self: center;
     margin: 0 auto;
 }
+
+@mixin mobile-responsive-width {
+    width: clamp(300px, 80%, 20rem);
+    align-self: center;
+    margin: 0 auto;
+}

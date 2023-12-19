@@ -36,6 +36,7 @@
 .button {
     background-color: $lightBlue;
     outline: transparent;
+    min-width: auto;
     padding: 20px;
     max-height: 4rem;
     text-align: center;

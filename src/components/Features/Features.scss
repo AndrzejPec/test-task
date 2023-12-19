@@ -2,7 +2,7 @@
 @import '../Modal/Modal.scss';
 
 .features {
-    padding: 200px 0;
+    margin-block: 10rem;
 
     &__link {
         font-size: 20px;
@@ -72,7 +72,7 @@
 
 @media (min-width: $breakpoint) {
     .features {
-        padding: 100px 0;
+        margin-block: 6rem;
         text-align: left;
         display: flex;
         flex-direction: column;
