@@ -41,7 +41,9 @@ export const Modal = () => {
 
         <button className="button myModal__button" id="closeModal">Close</button>
 
-        <Features livesInsideModal />
+        {/* <Features livesInsideModal /> */}
+
+        <img src='https://docs.spiderengine.io/_images/wip.svg' alt="WIP" />
 
       </dialog>
     </>

@@ -62,6 +62,7 @@ export const Form = () => {
             <form onSubmit={handleSubmit} className="form__body">
 
                 <div className='form__input-wrapper'>
+
                     <input
                         type="text"
                         placeholder="Enter your email address"
@@ -72,6 +73,7 @@ export const Form = () => {
                     />
 
                     {emailError && <span className="form__error">{emailError}</span>}
+
                 </div>
 
                 <button className="form__button button" type="submit">Contact us</button>
