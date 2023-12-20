@@ -19,9 +19,9 @@ export const Modal = () => {
     };
 
     const handleMouseMove = (event) => {
-      // if (event.clientY < 10) {
-      //   openModal();
-      // }
+      if (event.clientY < 10) {
+        openModal();
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -41,9 +41,7 @@ export const Modal = () => {
 
         <button className="button myModal__button" id="closeModal">Close</button>
 
-        {/* <Features livesInsideModal /> */}
-
-        <img src='https://docs.spiderengine.io/_images/wip.svg' alt="WIP" />
+        <Features livesInsideModal />
 
       </dialog>
     </>
