@@ -19,9 +19,9 @@ export const Modal = () => {
     };
 
     const handleMouseMove = (event) => {
-      if (event.clientY < 10) {
-        openModal();
-      }
+      // if (event.clientY < 10) {
+      //   openModal();
+      // }
     };
 
     window.addEventListener('mousemove', handleMouseMove);

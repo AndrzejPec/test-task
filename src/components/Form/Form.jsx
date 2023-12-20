@@ -3,37 +3,29 @@ import './Form.scss';
 
 export const Form = () => {
     const [counter, setCounter] = useState(35000);
+    const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [hasSubmitted, setHasSubmitted] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
     useEffect(() => {
-      let remainingTime = 20000;
-      const interval = setInterval(() => {
-          setCounter(prevCounter => {
-              const newCounter = prevCounter - 1750;
-              return newCounter > 0 ? newCounter : 0;
-          });
-          remainingTime -= 1000;
-          if (remainingTime <= 0) {
-              clearInterval(interval);
-          }
-      }, 1000);
-  
-      return () => clearInterval(interval);
-  }, []);
-  
-  const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [hasSubmitted, setHasSubmitted] = useState(false);
-      
-  const handleEmailChange = (e) => {
+        let remainingTime = 20000;
+        const interval = setInterval(() => {
+            setCounter((prevCounter) => (prevCounter - 1750 > 0 ? prevCounter - 1750 : 0));
+            remainingTime -= 1000;
+            if (remainingTime <= 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const handleEmailChange = (e) => {
         setEmail(e.target.value);
         if (hasSubmitted) {
-            if (!e.target.value) {
-                setEmailError('Email is required');
-            } else if (!/\S+@\S+\.\S+/.test(e.target.value)) {
-                setEmailError(`Whoops! Make sure it's an email :)`);
-            } else {
-                setEmailError('');
-            }
+            const isValidEmail = /\S+@\S+\.\S+/.test(e.target.value);
+            setEmailError(isValidEmail ? '' : 'Whoops! Make sure it\'s an email :)');
         } else {
             setEmailError('');
         }
@@ -42,15 +34,16 @@ export const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setHasSubmitted(true);
-        if (!email) {
-            setEmailError('Email is required');
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            setEmailError(`Whoops! Make sure it's an email :)`);
+        const isValidEmail = /\S+@\S+\.\S+/.test(email);
+        setEmailError(isValidEmail ? '' : 'Whoops! Make sure it\'s an email :)');
+
+        if (isValidEmail) {
+            setShowSuccessMessage(true);
         } else {
-            setEmailError('');
+            setShowSuccessMessage(false);
         }
     };
-    
+
     return (
         <section className="form">
             <span className="form__counter">
@@ -60,25 +53,21 @@ export const Form = () => {
             <h2 className="form__title">Stay up-to-date with what we're doing</h2>
 
             <form onSubmit={handleSubmit} className="form__body">
-
-                <div className='form__input-wrapper'>
-
+                <div className={`form__input-wrapper ${emailError ? 'form__input-wrapper--error' : ''} ${showSuccessMessage ? 'form__input-wrapper--success' : ''}`}>
                     <input
                         type="text"
                         placeholder="Enter your email address"
                         id="emailInput"
-                        className={`form__input form__input${emailError ? '--error' : ''}`}
+                        className="form__input"
                         value={email}
                         onChange={handleEmailChange}
                     />
-
-                    {emailError && <span className="form__error">{emailError}</span>}
-
                 </div>
 
-                <button className="form__button button" type="submit">Contact us</button>
-
+                <button className="form__button button" type="submit" aria-label="Contact us">
+                    Contact us
+                </button>
             </form>
         </section>
-    )
-}
+    );
+};
