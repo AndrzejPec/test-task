@@ -1,9 +1,12 @@
+@import '../../styles/variables';
+
 .faq {
-    padding: 10rem 0;
+    margin: 10rem auto;
     display: flex;
     flex-direction: column;
     align-self: center;
     max-width: 50ch;
+    @include mobile-responsive-width;
 
     &__button {
         width: 10rem;
@@ -13,5 +16,12 @@
 
     p {
         text-align: center;
+    }
+}
+
+@media (min-width: $breakpoint) {
+    .faq {
+        @include responsive-width;
+        margin: 10rem auto;
     }
 }

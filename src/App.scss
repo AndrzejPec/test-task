@@ -52,6 +52,7 @@
     -webkit-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
     -moz-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
     box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+    white-space: nowrap;
 
     &:hover {
       background: none;

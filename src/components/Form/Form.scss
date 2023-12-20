@@ -7,6 +7,9 @@
     background-color: hsl(231, 69%, 60%);
     color: white;
     flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
 
     &__counter {
         text-transform: uppercase;
@@ -19,58 +22,48 @@
 
     &__body {
         display: flex;
-        gap: 2rem;
         flex-direction: column;
-        position: relative;
+        align-items: center;
+        gap: 1rem;
+        @include mobile-responsive-width;
     }
 
     &__input {
         border: none;
-        padding: $input-padding;
+        padding: 1.25rem;
         border-radius: 4px;
         position: relative;
         outline: none;
         box-shadow: none;
-        min-height: $input-height;
-        width: clamp(200px, 75%, 500px);
+        min-height: 1rem;
         margin: 0 auto;
-        border-bottom: 10px solid $lightRed;
+        width: 100%;
+        box-sizing: border-box;
+
+        &-wrapper {
+            margin: 0 auto;
+            width: 100%;
+
+            &--error {
+                @include input-message("Whoops! Make sure it's an email :)", $lightRed, white);
+            }
+
+            &--success {
+                @include input-message("We've received your e-mail! :)", olive, goldenrod);
+            }
+        }
 
         &::placeholder {
             color: $grayish;
         }
-
-        &--error {
-            border: 2px solid $lightRed;
-            z-index: 2;
-        }
-    }
-
-    &__error {
-      display: block;
-      color: white;
-      background-color: $lightRed;
-      border-radius: .25em;
-      position: absolute;
-      top: 50px;
-      padding-top: 5px;
-      padding-left: 10px;
-      left: 0;
-      right: 0;
-      text-align: left;
-      z-index: 1;
-      font-style: italic;
-      font-size: smaller;
     }
 
     &__button {
         border: none;
         background-color: $lightRed;
-        max-height: 1rem;
-        box-sizing: content-box;
-        width: clamp(5rem, 20%, 8rem);
-        margin: 0 auto;
-
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 8rem;
         &:hover {
             background-color: whitesmoke;
             color: $lightRed;
@@ -84,25 +77,28 @@
         padding: 30px;
         height: 300px;
         background-color: $lightBlue;
-    
+
         &__body {
             flex-direction: row;
+            gap: 1rem;
+            justify-content: right;
+            width: clamp(20rem, 50%, 50ch);
             align-self: center;
             justify-content: space-evenly;
-            @include responsive-width;
+            width: 50%;
             align-items: center;
         }
 
         &__button {
-            max-width: 42ch;
+            // margin: unset;
         }
-    
+
         &__input {
-            width: clamp(15rem, 75%, 40ch);
+            width: 15rem;
         }
-    
+
         &__error {
-          width: 400px;
+            width: 400px;
         }
     }
 }
