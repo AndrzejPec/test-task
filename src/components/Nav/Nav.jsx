@@ -15,7 +15,7 @@ export const Nav = () => {
         <nav className="nav">
             <div className='nav__container'>
                 <div className={`nav__logo ${isMenuOpen ? 'nav__logo--active' : ''}`}>
-                    <Logo className="logo" />
+                    {isMenuOpen ? <Logo className="logo" onClick={toggleMenu}/> : <Logo className="logo" />}
                 </div>
                 <div className="nav__hamburger" onClick={toggleMenu}>
                     {isMenuOpen ? <CloseIcon onClick={toggleMenu}/> : <Hamburger />}

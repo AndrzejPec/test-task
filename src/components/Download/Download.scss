@@ -9,15 +9,20 @@
     &__cards {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 5rem;
     }
 }
 
 @media (min-width: $breakpoint) {
     .download {
+
+        & p {  
+            width: clamp(20rem, 70%, 50ch);
+        }
     
         &__cards {
             flex-direction: row;
+            gap: 3rem;
 
             @for $i from 1 through 5 {
                 > :nth-child(#{$i + 1}) {

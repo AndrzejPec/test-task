@@ -25,3 +25,11 @@
         margin: 10rem auto;
     }
 }
+
+@media (max-width: $breakpoint) {
+    .faq {
+        @include responsive-width;
+        margin: 10rem auto;
+        width: clamp(20rem, 70%, 50ch);
+    }
+}

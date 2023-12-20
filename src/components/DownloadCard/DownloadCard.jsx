@@ -18,7 +18,7 @@ export const DownloadCard = ({ browser, src, version }) => {
 
             <img src={breakline} alt="breakline" />
 
-            <button className='button'>Add & Install Extension</button>
+            <button className='button download-card__button'>Add & Install Extension</button>
         </figure>
     )
 }

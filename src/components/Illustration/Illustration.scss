@@ -28,7 +28,7 @@
     padding-top: 50%;
   }
   
-  &--align-left{
+  &--align-left {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     align-self: flex-start;
@@ -66,12 +66,38 @@
     padding-top: 25%;
     margin: 0;
   }
+}
 
-  img.left {
-    position: absolute;
-    width: 100%;
-    right: -10%;
-    top: -20%;
+@media (max-width: $breakpoint) {
+  .illustration {
+    width: 75%;
+    background-color: $lightBlue;
+    height: 250px;
+    position: relative;
+
+    img.left {
+      position: absolute;
+      width: clamp(5rem, 75%, 30rem);
+      right: -3%;
+      top: -12%;
+    }
+  
+    &--align-right {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      align-self: flex-end;
+      height: 0;
+      padding-top: 50%;
+      margin-top: 3rem;
+    }
+    
+    &--align-left{
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      align-self: flex-start;
+      height: 0;
+      padding-top: 40%;
+    }
   }
 }
 
