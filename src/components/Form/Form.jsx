@@ -22,22 +22,30 @@ export const Form = () => {
     }, []);
 
     const handleEmailChange = (e) => {
-        setEmail(e.target.value);
+        const inputValue = e.target.value;
+        setEmail(inputValue);
+
         if (hasSubmitted) {
-            const isValidEmail = /\S+@\S+\.\S+/.test(e.target.value);
-            setEmailError(isValidEmail ? '' : 'Whoops! Make sure it\'s an email :)');
+            setShowSuccessMessage(false);
+            if (inputValue) {
+                const isValidEmail = /\S+@\S+\.\S+/.test(inputValue);
+                setEmailError(hasSubmitted ? !isValidEmail : false);
+            } else {
+                setEmailError(false);
+            }
         } else {
-            setEmailError('');
+            setEmailError(false);
         }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setHasSubmitted(true);
-        const isValidEmail = /\S+@\S+\.\S+/.test(email);
-        setEmailError(isValidEmail ? '' : 'Whoops! Make sure it\'s an email :)');
 
-        if (isValidEmail) {
+        const isValidEmail = /\S+@\S+\.\S+/.test(email);
+        setEmailError(!isValidEmail);
+
+        if (!email || isValidEmail) {
             setShowSuccessMessage(true);
         } else {
             setShowSuccessMessage(false);

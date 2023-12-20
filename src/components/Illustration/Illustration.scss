@@ -75,13 +75,6 @@
     height: 250px;
     position: relative;
 
-    // img.right {
-    //   position: absolute;
-    //   top: -10%;
-    //   width: clamp(15rem, 100%, 60ch);
-    //   left: -15%;
-    // }
-
     img.left {
       position: absolute;
       width: clamp(5rem, 75%, 30rem);
@@ -106,4 +99,30 @@
       padding-top: 40%;
     }
   }
+}
+
+@keyframes slideInFromLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+.animate-image-left {
+  animation: slideInFromLeft 2s ease-out;
+}
+
+.animate-image-right {
+  animation: slideInFromRight 2s ease-out;
 }

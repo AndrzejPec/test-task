@@ -28,16 +28,4 @@ $input-padding: 1.25rem;
     margin: 0 auto;
 }
 
-@mixin input-message($message, $backgroundColor, $color) {
-    &::after {
-        content: $message;
-        font-size: small;
-        background-color: $backgroundColor;
-        font-style: italic;
-        color: $color;
-        width: 100%;
-        display: flex;
-        box-sizing: border-box;
-        padding-inline-start: 1.2rem;
-    }
-}
+

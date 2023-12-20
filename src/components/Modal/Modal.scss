@@ -6,6 +6,15 @@
     padding: 2rem 2rem 0 0;
     border-radius: 0.5rem;
 
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    opacity: 0;
+    transform: translateY(-100px);
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     &::backdrop {
         background: linear-gradient(45deg, rgba(0, 0, 255, 0.75) 0%, rgba(173, 216, 230, 0.75) 50%, rgba(255, 99, 71, 0.75) 100%);
     }

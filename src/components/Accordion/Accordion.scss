@@ -1,35 +1,35 @@
-@import '../../styles/variables';
+  @import '../../styles/variables';
 
-.accordion__item {
-    text-align: left;
+  .accordion__item {
+      text-align: left;
 
-    &:first-of-type {
-      margin-top: 1.5rem;
-    }
+      &:first-of-type {
+        margin-top: 1.5rem;
+      }
 
-    .accordion__title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding: 20px 0;
-      border-bottom: 1px solid $grayish;
-  
-      .accordion__icon {
-        transition: transform 0.3s ease;
+      .accordion__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 20px 0;
+        border-bottom: 1px solid $grayish;
+    
+        .accordion__icon {
+          transition: transform 0.3s ease;
+        }
+      }
+    
+      &.active .accordion__icon {
+        transform: rotate(180deg);
+      }
+    
+      .accordion__content {
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    
+        &.active {
+          max-height: 500px;
+        }
       }
     }
-  
-    &.active .accordion__icon {
-      transform: rotate(180deg);
-    }
-  
-    .accordion__content {
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-  
-      &.active {
-        max-height: 500px;
-      }
-    }
-  }

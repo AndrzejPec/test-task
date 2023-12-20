@@ -1,5 +1,19 @@
 @import '../../styles/variables.scss';
 
+@mixin input-message($message, $backgroundColor, $color) {
+    &::after {
+        content: $message;
+        font-size: small;
+        background-color: $backgroundColor;
+        font-style: italic;
+        color: $color;
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        padding-inline-start: 1.2rem;
+    }
+}
+
 .form {
     display: flex;
     gap: 2rem;
@@ -8,7 +22,6 @@
     color: white;
     flex-direction: column;
     border: transparent;
-    transition: border-color 0.3s ease;
 
     &__counter {
         text-transform: uppercase;
@@ -44,10 +57,10 @@
 
         &-wrapper {
             margin: 0 auto;
+            transition: border 0.3s ease, outline 0.3s ease;
             border: 0 solid transparent;
             border-radius: 5px;
             width: 100%;
-            
             
             &::after {
             }
