@@ -7,8 +7,7 @@
     background-color: hsl(231, 69%, 60%);
     color: white;
     flex-direction: column;
-    border: 2px solid transparent;
-    border-radius: 4px;
+    border: transparent;
     transition: border-color 0.3s ease;
 
     &__counter {
@@ -23,7 +22,7 @@
     &__body {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: baseline;
         gap: 1rem;
         @include mobile-responsive-width;
     }
@@ -39,17 +38,22 @@
         margin: 0 auto;
         width: 100%;
         box-sizing: border-box;
+        outline-offset: 1rem;
 
         &-wrapper {
             margin: 0 auto;
+            border: 5px solid transparent;
+            border-radius: 5px;
             width: 100%;
 
             &--error {
                 @include input-message("Whoops! Make sure it's an email :)", $lightRed, white);
+                border: 5px solid $lightRed;
             }
 
             &--success {
                 @include input-message("We've received your e-mail! :)", olive, goldenrod);
+                border: 5px solid olive;
             }
         }
 
@@ -86,7 +90,7 @@
             align-self: center;
             justify-content: space-evenly;
             width: 50%;
-            align-items: center;
+            align-items: baseline;
         }
 
         &__button {
@@ -94,7 +98,7 @@
         }
 
         &__input {
-            width: 15rem;
+            // width: 15rem;
         }
 
         &__error {
