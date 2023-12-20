@@ -25,6 +25,8 @@
         align-items: baseline;
         gap: 1rem;
         @include mobile-responsive-width;
+        width: clamp(300px, 80%, 30rem);
+        margin: 0 auto 3rem;
     }
 
     &__input {
@@ -42,9 +44,13 @@
 
         &-wrapper {
             margin: 0 auto;
-            border: 5px solid transparent;
+            border: 0 solid transparent;
             border-radius: 5px;
             width: 100%;
+            
+            
+            &::after {
+            }
 
             &--error {
                 @include input-message("Whoops! Make sure it's an email :)", $lightRed, white);
@@ -52,7 +58,7 @@
             }
 
             &--success {
-                @include input-message("We've received your e-mail! :)", olive, goldenrod);
+                @include input-message("\1F389 We've received your e-mail! \1F389", olive, goldenrod);
                 border: 5px solid olive;
             }
         }
@@ -66,8 +72,9 @@
         border: none;
         background-color: $lightRed;
         box-sizing: border-box;
+        max-width: unset;
         width: 100%;
-        max-width: 8rem;
+
         &:hover {
             background-color: whitesmoke;
             color: $lightRed;
@@ -94,7 +101,7 @@
         }
 
         &__button {
-            // margin: unset;
+            max-width: 8rem;
         }
 
         &__input {

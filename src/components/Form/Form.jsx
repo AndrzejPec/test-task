@@ -4,7 +4,7 @@ import './Form.scss';
 export const Form = () => {
     const [counter, setCounter] = useState(35000);
     const [email, setEmail] = useState('');
-    const [emailError, setEmailError] = useState('');
+    const [emailError, setEmailError] = useState(false);
     const [hasSubmitted, setHasSubmitted] = useState(false);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 

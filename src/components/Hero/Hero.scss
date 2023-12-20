@@ -79,3 +79,16 @@
             }
     }
 }
+
+@media (max-width: $breakpoint) {
+    .hero__text {
+        width: clamp(300px, 80%, 50ch);
+    }
+
+    .hero__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 0 auto;
+    }
+}

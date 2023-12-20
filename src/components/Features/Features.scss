@@ -155,3 +155,25 @@
         }
     }
 }
+
+@media (max-width: $breakpoint) {
+    .features__text-area {
+        margin: 0 auto;
+    }
+
+    .features__top {
+        margin: 0 auto 6rem;
+    }
+
+    .features__link {
+        width: 80%;
+    }
+
+    .features p {
+        width: clamp(20rem, 70%, 50ch);
+    }
+
+    .features__link::after {
+        max-width: 100%;
+    }
+}
