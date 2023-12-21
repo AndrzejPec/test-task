@@ -3,7 +3,7 @@
 .App {
   margin: 0 auto;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: $backgroundColor;
   min-width: $mobile;
   width: 100%;
   max-width: $desktop;
@@ -29,6 +29,7 @@
     line-height: 1.5;
     max-width: 50ch;
     align-self: center;
+    text-align: justify;
   }
 }
 

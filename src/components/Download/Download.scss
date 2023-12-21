@@ -15,10 +15,6 @@
 
 @media (min-width: $breakpoint) {
     .download {
-
-        & p {  
-            width: clamp(20rem, 70%, 50ch);
-        }
     
         &__cards {
             flex-direction: row;
