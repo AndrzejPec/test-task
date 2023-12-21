@@ -26,7 +26,6 @@ export const Form = () => {
         setEmail(inputValue);
 
         if (hasSubmitted) {
-            setShowSuccessMessage(false);
             if (inputValue) {
                 const isValidEmail = /\S+@\S+\.\S+/.test(inputValue);
                 setEmailError(hasSubmitted ? !isValidEmail : false);
@@ -45,10 +44,10 @@ export const Form = () => {
         const isValidEmail = /\S+@\S+\.\S+/.test(email);
         setEmailError(!isValidEmail);
 
-        if (!email || isValidEmail) {
-            setShowSuccessMessage(true);
-        } else {
+        if (!email || !isValidEmail) {
             setShowSuccessMessage(false);
+        } else {
+            setShowSuccessMessage(true);
         }
     };
 
@@ -61,7 +60,7 @@ export const Form = () => {
             <h2 className="form__title">Stay up-to-date with what we're doing</h2>
 
             <form onSubmit={handleSubmit} className="form__body">
-                <div className={`form__input-wrapper ${emailError ? 'form__input-wrapper--error' : ''} ${showSuccessMessage ? 'form__input-wrapper--success' : ''}`}>
+                <div className={`form__input-wrapper ${showSuccessMessage ? 'form__input-wrapper--success' : ''} ${emailError ? 'form__input-wrapper--error' : ''}`}>
                     <input
                         type="text"
                         placeholder="Enter your email address"
