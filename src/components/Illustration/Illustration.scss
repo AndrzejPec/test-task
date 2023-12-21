@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/animations';
 
 .illustration {
     width: 75%;
@@ -98,24 +99,6 @@
       height: 0;
       padding-top: 40%;
     }
-  }
-}
-
-@keyframes slideInFromLeft {
-  from {
-      transform: translateX(-100%);
-  }
-  to {
-      transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  from {
-      transform: translateX(100%);
-  }
-  to {
-      transform: translateX(0);
   }
 }
 

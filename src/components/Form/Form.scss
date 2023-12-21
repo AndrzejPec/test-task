@@ -1,24 +1,11 @@
 @import '../../styles/variables.scss';
-
-@mixin input-message($message, $backgroundColor, $color) {
-    &::after {
-        content: $message;
-        font-size: small;
-        background-color: $backgroundColor;
-        font-style: italic;
-        color: $color;
-        width: 100%;
-        display: flex;
-        box-sizing: border-box;
-        padding-inline-start: 1.2rem;
-    }
-}
+@import '../../styles/mixins.scss';
 
 .form {
     display: flex;
     gap: 2rem;
     padding: 4rem 2rem 2rem;
-    background-color: hsl(231, 69%, 60%);
+    background-color: $lightBlue;
     color: white;
     flex-direction: column;
     border: transparent;
@@ -46,14 +33,12 @@
         border: none;
         padding: 1.25rem;
         border-radius: 4px;
-        position: relative;
         outline: none;
         box-shadow: none;
         min-height: 1rem;
         margin: 0 auto;
         width: 100%;
         box-sizing: border-box;
-        outline-offset: 1rem;
 
         &-wrapper {
             margin: 0 auto;
@@ -61,18 +46,15 @@
             border: 0 solid transparent;
             border-radius: 5px;
             width: 100%;
-            
-            &::after {
-            }
 
             &--error {
                 @include input-message("Whoops! Make sure it's an email :)", $lightRed, white);
-                border: 5px solid $lightRed;
+                outline: 5px solid $lightRed;
             }
 
             &--success {
                 @include input-message("\1F389 We've received your e-mail! \1F389", olive, goldenrod);
-                border: 5px solid olive;
+                outline: 5px solid olive;
             }
         }
 
@@ -115,10 +97,6 @@
 
         &__button {
             max-width: 8rem;
-        }
-
-        &__input {
-            // width: 15rem;
         }
 
         &__error {

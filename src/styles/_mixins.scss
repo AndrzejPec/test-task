@@ -1,0 +1,25 @@
+@mixin responsive-width {
+    width: clamp(20rem, 50%, 50ch);
+    align-self: center;
+    margin: 0 auto;
+}
+
+@mixin mobile-responsive-width {
+    width: clamp(300px, 80%, 20rem);
+    align-self: center;
+    margin: 0 auto;
+}
+
+@mixin input-message($message, $backgroundColor, $color) {
+    &::after {
+        content: $message;
+        font-size: small;
+        background-color: $backgroundColor;
+        font-style: italic;
+        color: $color;
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        padding-inline-start: 1.2rem;
+    }
+}

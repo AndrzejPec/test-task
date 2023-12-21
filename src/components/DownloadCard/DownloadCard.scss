@@ -22,15 +22,10 @@
         -webkit-box-shadow: 0px 15px 30px -5px $lightBlue;
         -moz-box-shadow: 0px 15px 30px -5px $lightBlue;
         box-shadow: 0px 15px 30px -5px $lightBlue;
-
-        .download-card__img {
-            transform: rotate(360deg);
-        }
     }
 
     &__img {
         width: 100px;
         padding-bottom: 1rem;
-        // transition: transform 1s linear;
     }
 }

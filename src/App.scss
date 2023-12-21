@@ -11,7 +11,11 @@
   line-height: 24px;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  font-size: $fontSize;
+
+  :is(h1, h2, h3) {
+    text-wrap: balance;
+  }
 
   h2 {
     font-weight: 500;

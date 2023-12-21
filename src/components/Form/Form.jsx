@@ -65,6 +65,7 @@ export const Form = () => {
                     <input
                         type="text"
                         placeholder="Enter your email address"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                         id="emailInput"
                         className="form__input"
                         value={email}

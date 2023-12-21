@@ -5,6 +5,7 @@ $darkBlue: hsl(229, 31%, 21%);
 $lightBlueTransparent: rgba(91, 134, 229, 0.5);
 
 $bodyFont: 'Rubik', sans-serif;
+$fontSize: 18px;
 
 $mobile: 375px;
 $breakpoint: 1024px;
@@ -15,17 +16,3 @@ $desktop-margin: 200px;
 
 $input-height: 1rem;
 $input-padding: 1.25rem;
-
-@mixin responsive-width {
-    width: clamp(20rem, 50%, 50ch);
-    align-self: center;
-    margin: 0 auto;
-}
-
-@mixin mobile-responsive-width {
-    width: clamp(300px, 80%, 20rem);
-    align-self: center;
-    margin: 0 auto;
-}
-
-
