@@ -6,6 +6,10 @@
     align-items: center;
     gap: 30px;
 
+    p {
+        margin-inline: 5rem;
+    }
+
     &__cards {
         display: flex;
         flex-direction: column;
