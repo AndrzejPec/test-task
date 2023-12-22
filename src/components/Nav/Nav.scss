@@ -46,7 +46,6 @@
     &__item {
         color: white;
         padding: 20px 0;
-        width: 370px;
         text-transform: uppercase;
         border-top: 1px solid $grayish;
         cursor: pointer;
@@ -183,4 +182,57 @@
     fill: white;
     cursor: pointer;
     transition: fill 2s ease;
+}
+
+@media (max-width: $breakpoint) {
+    .nav {
+        &__item {
+            color: white;
+            padding: 20px 0;
+            text-transform: uppercase;
+            border-top: 1px solid $grayish;
+            cursor: pointer;
+
+            a {
+                position: absolute;
+                top: 6rem;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                color: white;
+                font-size: small;
+            }
+    
+            &:hover {
+                color: $lightBlue;
+                
+                a {
+                    opacity: 1;
+                }
+            }
+    
+            &:last-child {
+                padding-top: 30px;
+                position: relative;
+
+                &:hover button {
+                    outline: 2px solid hsl(231, 69%, 60%);
+                }
+            }
+        }
+    
+        &__button {
+            width: 100%;
+            padding-block: 15px;
+            text-transform: uppercase;
+            font: unset;
+            color: unset;
+            cursor: unset;
+            letter-spacing: unset;
+            border-radius: 5px;
+            background: none;
+            outline: auto;
+        }
+    }
 }

@@ -26,6 +26,7 @@ export const Nav = () => {
                     <li className="nav__item">Contact</li>
                     <li className="nav__item">
                         <button className="button nav__button">Login</button>
+                        <a className='nav__signup'>SIGNUP TODAY!!!!!!! aaaaaa</a>
                     </li>
                 </ul>
             </div>
