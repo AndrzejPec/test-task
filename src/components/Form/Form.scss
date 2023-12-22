@@ -11,6 +11,12 @@
     flex-direction: column;
     border: transparent;
 
+    &__error-icon {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+    }
+
     &__counter {
         text-transform: uppercase;
         letter-spacing: .3ch;
@@ -28,7 +34,6 @@
         @include mobile-responsive-width;
         width: clamp(300px, 80%, 30rem);
         margin: 0 auto 8rem;
-        position: relative;
     }
 
     &__input {
@@ -48,6 +53,7 @@
             border: 0 solid transparent;
             border-radius: 5px;
             width: 100%;
+            position: relative;
 
             &::after {
                 content: '\00a0';

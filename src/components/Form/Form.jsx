@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Form.scss';
 
+import { ReactComponent as ErrorIcon } from '../../img/icon-error.svg';
+
 export const Form = () => {
     const [counter, setCounter] = useState(35000);
     const [email, setEmail] = useState('');
@@ -10,29 +12,31 @@ export const Form = () => {
     useEffect(() => {
         let remainingTime = 20000;
         const interval = setInterval(() => {
-            setCounter((prevCounter) => (prevCounter - 1750 > 0 ? prevCounter - 1750 : 0));
-            remainingTime -= 1000;
+            setCounter((prevCounter) => (prevCounter - 175 > 0 ? prevCounter - 175 : 0));
+            remainingTime -= 100;
             if (remainingTime <= 0) {
                 clearInterval(interval);
             }
-        }, 1000);
+        }, 100);
 
         return () => clearInterval(interval);
     }, []);
+    
 
     const handleEmailChange = (e) => {
         const inputValue = e.target.value;
         setEmail(inputValue);
+        const isValidEmail = /\S+@\S+\.\S+/.test(inputValue);
 
-        if (emailError && !inputValue) {
+        if (!inputValue || isValidEmail) {
             setEmailError(false);
         }
     };
 
     const handleSubmit = (e) => {
+        const isValidEmail = /\S+@\S+\.\S+/.test(email);
         e.preventDefault();
 
-        const isValidEmail = /\S+@\S+\.\S+/.test(email);
         setEmailError(!isValidEmail);
 
         isValidEmail ? setShowSuccessMessage(true) : setShowSuccessMessage(false);
@@ -62,6 +66,7 @@ export const Form = () => {
                         aria-describedby={emailError ? 'Email error' : null}
                         autocomplete="off"
                     />
+                    {emailError && <ErrorIcon className='form__error-icon'/>}
                 </div>
 
                 <button
