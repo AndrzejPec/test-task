@@ -49,7 +49,7 @@ export const Features = ({ livesInsideModal }) => {
     };
 
     return (
-        <section className="features">
+        <section className="features" id="features">
             <div className='features__top'>
                 {!livesInsideModal && (
                     <>
