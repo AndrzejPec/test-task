@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.b39c6382.css",
-    "main.js": "/test-task/static/js/main.fe8b9697.js",
+    "main.css": "/test-task/static/css/main.36a39ba2.css",
+    "main.js": "/test-task/static/js/main.4f5d810d.js",
     "static/media/illustration-features-tab-3.svg": "/test-task/static/media/illustration-features-tab-3.a4206aab7946773b29b702492d2d014b.svg",
     "static/media/illustration-features-tab-2.svg": "/test-task/static/media/illustration-features-tab-2.e933bd6d921c537d7743e08ea4ec488e.svg",
     "static/media/illustration-hero.svg": "/test-task/static/media/illustration-hero.07801d05cb11930f0c826add8c05ce22.svg",
@@ -14,14 +14,15 @@
     "static/media/icon-twitter.svg": "/test-task/static/media/icon-twitter.dde79e7edd3892319de2ee22ea7ca39d.svg",
     "static/media/icon-facebook.svg": "/test-task/static/media/icon-facebook.8b45ba94b5f75f0d38a9bbcc11df55c2.svg",
     "static/media/icon-close.svg": "/test-task/static/media/icon-close.10bec96d35a663e144d40ed135500293.svg",
+    "static/media/icon-error.svg": "/test-task/static/media/icon-error.a46cc66573dea1a15acb0dd260693083.svg",
     "static/media/logo-opera.svg": "/test-task/static/media/logo-opera.ff14e4763945338fe002017c72e7e597.svg",
     "static/media/icon-hamburger.svg": "/test-task/static/media/icon-hamburger.4385fd507d24f37ccbb3ae359b5c9555.svg",
     "static/media/icon-arrow.svg": "/test-task/static/media/icon-arrow.8174203a5d4fc44f5247b825de6e2158.svg",
-    "main.b39c6382.css.map": "/test-task/static/css/main.b39c6382.css.map",
-    "main.fe8b9697.js.map": "/test-task/static/js/main.fe8b9697.js.map"
+    "main.36a39ba2.css.map": "/test-task/static/css/main.36a39ba2.css.map",
+    "main.4f5d810d.js.map": "/test-task/static/js/main.4f5d810d.js.map"
   },
   "entrypoints": [
-    "static/css/main.b39c6382.css",
-    "static/js/main.fe8b9697.js"
+    "static/css/main.36a39ba2.css",
+    "static/js/main.4f5d810d.js"
   ]
 }
