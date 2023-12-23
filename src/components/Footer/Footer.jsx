@@ -28,14 +28,33 @@ export const Footer = () => {
                     <Logo className="logo" />
                 </div>
                 <ul className='footer__list'>
-                    <li className="footer__link"><Link to="features" spy={true} smooth={true} offset={-100} duration={1000}>Features</Link></li>
-                    <li className="footer__link"><Link to="download" spy={true} smooth={true} offset={-50} duration={1000}>Pricing</Link></li>
+                    <li className="footer__link">
+                        <Link
+                            to="features"
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={1000}
+                        >
+                            Features
+                        </Link>
+                    </li>
+                    <li className="footer__link">
+                        <Link to="download"
+                            spy={true}
+                            smooth={true}
+                            offset={-50}
+                            duration={1000}
+                        >
+                            Pricing
+                        </Link>
+                    </li>
                     <li className="footer__link">
                         <Link onClick={handleOpenContact}>
                             Contact
                         </Link>
                         {isContactOpen && (
-                        <Contact onClose={handleCloseContact} />
+                            <Contact onClose={handleCloseContact} />
                         )}
                     </li>
                 </ul>

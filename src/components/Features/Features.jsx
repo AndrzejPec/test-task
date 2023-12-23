@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Element } from 'react-scroll';
 
-
 import './Features.scss';
 
 import { Illustration } from "../Illustration/Illustration";
@@ -52,45 +51,44 @@ export const Features = ({ livesInsideModal }) => {
 
     return (
         <section className="features" id="features">
-            <Element name="features">
-                <div className='features__top'>
-                    {!livesInsideModal && (
-                        <>
-                            <div className="features__header">
-                                <h2>Features</h2>
-                                <p>
-                                    Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
-                                </p>
-                            </div>
-                            
-                            <ul className="features__list">
-                            {tabs.map((tab, index) => (
-                                <li
-                                    key={tab.title} 
-                                    onClick={() => handleOnClick(index)}
-                                    className={`features__link features__link${activeIndex === index ? '--active' : ''}`}
-                                >
-                                    {tab.title}
-                                </li>
-                            ))}
-                            </ul>
-                        </>
-                    )}
-                </div>
+            <Element name="features" />
+            <div className='features__top'>
+                {!livesInsideModal && (
+                    <>
+                        <div className="features__header">
+                            <h2>Features</h2>
+                            <p>
+                                Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+                            </p>
+                        </div>
+                        
+                        <ul className="features__list">
+                        {tabs.map((tab, index) => (
+                            <li
+                                key={tab.title} 
+                                onClick={() => handleOnClick(index)}
+                                className={`features__link features__link${activeIndex === index ? '--active' : ''}`}
+                            >
+                                {tab.title}
+                            </li>
+                        ))}
+                        </ul>
+                    </>
+                )}
+            </div>
 
-                <div className="features__content">
-                    <Illustration
-                        align="left"
-                        src={tabs[activeIndex].illustration}
-                        description="Features illustration"
-                        livesInsideModal={livesInsideModal}
-                    />
-                    <div className="features__text-area">
-                        {tabs[activeIndex].content}
-                        <button className="button features__button">More Info</button>
-                    </div>
+            <div className="features__content">
+                <Illustration
+                    align="left"
+                    src={tabs[activeIndex].illustration}
+                    description="Features illustration"
+                    livesInsideModal={livesInsideModal}
+                />
+                <div className="features__text-area">
+                    {tabs[activeIndex].content}
+                    <button className="button features__button">More Info</button>
                 </div>
-            </Element>
+            </div>
         </section>
     );
 }
