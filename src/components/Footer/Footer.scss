@@ -20,12 +20,7 @@
     &__logo {
         cursor: pointer;
     }
-
-    &__logo svg path g {
-        fill: white;
-        cursor: pointer;
-    }
-
+    
     &__list {
         color: white;
         display: flex;
@@ -40,10 +35,6 @@
         flex-direction: column;
         color: white;
         text-transform: uppercase;
-
-        &:hover {
-            color: $lightRed;
-        }
     }
 
     &__social {
@@ -51,8 +42,8 @@
         gap: 2rem;
         cursor: pointer;
 
-        & svg path:hover  {
-            fill: orange;
+        & a:hover svg path{
+            fill: $lightRed;
         }
     }
 }

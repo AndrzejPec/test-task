@@ -60,8 +60,20 @@ export const Footer = () => {
                 </ul>
             </div>
             <div className='footer__social'>
-                <FB />
-                <Twitter />
+                <a
+                    href="https://www.facebook.com"
+                    target='_blank'
+                    rel="noopener noreferrer"
+                >
+                    <FB />
+                </a>
+                <a
+                    href="https://twitter.com"
+                    target='_blank'
+                    rel="noopener noreferrer"
+                >
+                    <Twitter />
+                </a>
             </div>
         </footer>
     )
