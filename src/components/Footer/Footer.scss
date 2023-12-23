@@ -20,7 +20,7 @@
     &__logo {
         cursor: pointer;
     }
-    
+
     &__list {
         color: white;
         display: flex;
@@ -35,6 +35,10 @@
         flex-direction: column;
         color: white;
         text-transform: uppercase;
+
+        &:hover {
+            color: $lightRed;
+        }
     }
 
     &__social {

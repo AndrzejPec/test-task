@@ -31,3 +31,13 @@
         opacity: 1;
     }
 }
+
+@keyframes closing {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

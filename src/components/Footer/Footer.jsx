@@ -11,15 +11,15 @@ import { ReactComponent as FB } from '../../img/icon-facebook.svg';
 import { ReactComponent as Twitter } from '../../img/icon-twitter.svg';
 
 export const Footer = () => {
-    const [isContactOpen, setContactOpen] = useState(false);
+    // const [isContactOpen, setContactOpen] = useState(false);
 
-    const handleOpenContact = () => {
-        setContactOpen(true);
-      };
+    // const handleOpenContact = () => {
+    //     setContactOpen(true);
+    //   };
     
-      const handleCloseContact = () => {
-        setContactOpen(false);
-      };
+    //   const handleCloseContact = () => {
+    //     setContactOpen(false);
+    //   };
 
     return (
         <footer className="footer">
@@ -40,22 +40,25 @@ export const Footer = () => {
                         </Link>
                     </li>
                     <li className="footer__link">
-                        <Link to="download"
+                        <Link
+                            to="download"
                             spy={true}
                             smooth={true}
                             offset={-50}
                             duration={1000}
+                            className=''
                         >
                             Pricing
                         </Link>
                     </li>
                     <li className="footer__link">
-                        <Link onClick={handleOpenContact}>
+                        Contact
+                        {/* <Link onClick={handleOpenContact}>
                             Contact
                         </Link>
                         {isContactOpen && (
                             <Contact onClose={handleCloseContact} />
-                        )}
+                        )} */}
                     </li>
                 </ul>
             </div>

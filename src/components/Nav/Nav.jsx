@@ -10,9 +10,26 @@ import './Nav.scss';
 export const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const nav = document.querySelector('.nav__list');
+    const logo = document.querySelector('.nav__logo');
+
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+        const nav = document.querySelector('.nav__list');
+      
+        if (isMenuOpen) {
+            nav.classList.add('nav__list--closing');
+            logo.classList.add('nav__logo--closing');
+
+            nav.addEventListener('animationend', handleAnimationEnd, { once: true });
+        }  else {
+            setIsMenuOpen(true);
+        }
+      };
+      
+      const handleAnimationEnd = () => {
+        setIsMenuOpen(false);
+      };
+      
 
     return (
         <nav className="nav">
@@ -31,6 +48,8 @@ export const Nav = () => {
                             smooth={true}
                             offset={-100}
                             duration={1000}
+                            className="nav__link"
+                            onClick={toggleMenu}
                         >
                             Features
                         </Link>
@@ -41,6 +60,8 @@ export const Nav = () => {
                             smooth={true}
                             offset={-50}
                             duration={1000}
+                            className="nav__link"
+                            onClick={toggleMenu}
                         >
                             Pricing
                         </Link>
@@ -51,6 +72,8 @@ export const Nav = () => {
                             smooth={true}
                             offset={-50}
                             duration={1000}
+                            className="nav__link"
+                            onClick={toggleMenu}
                         >
                             Contact
                         </Link>

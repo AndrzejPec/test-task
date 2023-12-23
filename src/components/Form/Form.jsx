@@ -42,10 +42,12 @@ export const Form = () => {
         isValidEmail ? setShowSuccessMessage(true) : setShowSuccessMessage(false);
     };
 
+    const formattedNumber = counter.toLocaleString('de-DE').replace('.', ',');
+
     return (
         <section className="form">
             <span className="form__counter" aria-live="polite">
-                {`${counter.toLocaleString('de-DE')}${counter ? '+' : ''}`} already joined
+                {`${formattedNumber}${counter ? '+' : ''}`} already joined
             </span>
 
             <h2 className="form__title">Stay up-to-date with what we're doing</h2>

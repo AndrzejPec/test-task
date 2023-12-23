@@ -50,13 +50,17 @@
         border-top: 1px solid $grayish;
         cursor: pointer;
 
-        &:hover {
+        &:hover .nav__link {
             color: $lightBlue;
         }
 
         &:last-child {
             padding-top: 30px;
         }
+    }
+
+    &__link {
+        color: white;
     }
 
     &__button {
@@ -108,7 +112,6 @@
             &--active {
                 padding-top: 6rem;
             }
-    
         }
     
         &__item {
@@ -124,6 +127,14 @@
             &:last-child {
                 padding-top: unset;
             }
+        }
+
+        .nav__item:hover .nav__link {
+            color: unset;
+        }
+
+        &__link {
+            color: unset;
         }
     
         &__button {
@@ -167,11 +178,6 @@
     .nav__button {
         max-width: 60dvw;
     }
-    
-    .nav__logo--active svg g path {
-        fill: white;
-        cursor: pointer;
-    }
 
     .nav__logo {
         position: absolute;
@@ -188,6 +194,11 @@
     transition: fill 2s ease;
 }
 
+.nav__logo--closing svg g path {
+    fill: black;
+    transition: fill 2s ease;
+}
+
 @media (max-width: $breakpoint) {
     .nav {
         &__item {
@@ -196,22 +207,11 @@
             text-transform: uppercase;
             border-top: 1px solid $grayish;
             cursor: pointer;
-
-            a {
-                position: absolute;
-                top: 6rem;
-                left: 0;
-                width: 100%;
-                opacity: 0;
-                transition: opacity 1s ease-in-out;
-                color: white;
-                font-size: small;
-            }
     
             &:hover {
                 color: $lightBlue;
                 
-                a {
+                .nav__signup {
                     opacity: 1;
                 }
             }
@@ -238,5 +238,20 @@
             background: none;
             outline: auto;
         }
+
+        &__signup {
+            position: absolute;
+            top: 6rem;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            color: white;
+            font-size: small;
+        }
     }
+}
+
+.nav__list--closing {
+    animation: closing 0.5s cubic-bezier(1, 0, 0, 1);
 }
