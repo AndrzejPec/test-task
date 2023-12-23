@@ -15,25 +15,6 @@ import { Footer } from './components/Footer/Footer';
 
 
 export const App = () => {
-
-  // Smooth scrolling animations
-  useEffect(() => {
-    Events.scrollEvent.register('begin', (to, element) => {
-      console.log('begin', to, element);
-    });
-
-    Events.scrollEvent.register('end', (to, element) => {
-      console.log('end', to, element);
-    });
-
-    scrollSpy.update();
-
-    return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    };
-  }, []);
-
   return (
     <main className="App">
       
