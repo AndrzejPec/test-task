@@ -1,5 +1,6 @@
 import './Accordion.scss';
 
+import { ReactComponent as ArrowIcon } from '../../img/icon-arrow.svg';
 import arrow from '../../img/icon-arrow.svg';
 
 export const Accordion = ({ title, isActive, onClick, children }) => {
@@ -9,7 +10,7 @@ export const Accordion = ({ title, isActive, onClick, children }) => {
             <div className="accordion__title" onClick={onClick}>
 
                 {title}
-                <img src={arrow} alt="Toggle" className="accordion__icon" />
+                <ArrowIcon id="accordion-icon" className='accordion__icon'/>
 
             </div>
             <div className={`accordion__content ${isActive ? 'active' : ''}`}>

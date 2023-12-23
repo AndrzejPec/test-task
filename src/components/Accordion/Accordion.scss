@@ -1,24 +1,24 @@
   @import '../../styles/variables';
 
   .accordion__item {
-      text-align: left;
+    text-align: left;
 
-      &:first-of-type {
+    &:first-of-type {
         margin-top: 1.5rem;
-      }
+    }
 
-      .accordion__title {
+    .accordion__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
         padding: 20px 0;
         border-bottom: 1px solid $grayish;
-    
+
         .accordion__icon {
-          transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
         }
-      }
+    }
     
       &.active .accordion__icon {
         transform: rotate(180deg);
@@ -26,10 +26,22 @@
     
       .accordion__content {
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.5s ease;
     
         &.active {
           max-height: 500px;
         }
+      }
+
+      .arrow-icon {
+        scale: 1.2;
+      }
+
+      & svg path {
+        transition: stroke 0.5s ease;
+      }
+
+      &.active svg path {
+        stroke: $lightRed;
       }
     }
