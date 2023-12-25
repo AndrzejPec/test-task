@@ -35,9 +35,11 @@
 @keyframes closing {
     from {
         opacity: 1;
+        max-height: min-content;
     }
 
     to {
         opacity: 0;
+        max-height: 0;
     }
 }

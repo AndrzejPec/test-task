@@ -1,4 +1,5 @@
   @import '../../styles/variables';
+  @import '../../styles/animations';
 
   .accordion__item {
     text-align: left;
@@ -45,3 +46,7 @@
         stroke: $lightRed;
       }
     }
+
+.closing {
+    animation: closing 1s ease; 
+}
