@@ -13,6 +13,7 @@ export const Modal = () => {
             if (modal) {
                 modal.showModal();
                 setIsActive(true);
+                clearTimeout(timer);
             }
         };
 
@@ -20,16 +21,22 @@ export const Modal = () => {
             if (modal) {
                 modal.close();
                 setIsActive(false);
+                removeMouseEscapeEvent();
             }
         };
 
-        const handleMouseMove = (event) => {
+        const removeMouseEscapeEvent = () => {
+            window.removeEventListener('mousemove', handleMouseEscape);
+        };
+        
+        const handleMouseEscape = (event) => {
             if (event.clientY < 10) {
                 openModal();
+                removeMouseEscapeEvent();
             }
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mousemove', handleMouseEscape);
         closeModalButton.addEventListener('click', closeModal);
 
         const timer = setTimeout(openModal, 30000);
