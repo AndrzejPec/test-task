@@ -1,80 +1,84 @@
 import React, { useState, useEffect } from 'react';
 import './Form.scss';
 
+import { ReactComponent as ErrorIcon } from '../../img/icon-error.svg';
+
 export const Form = () => {
     const [counter, setCounter] = useState(35000);
+    const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
     useEffect(() => {
-      let remainingTime = 20000;
-      const interval = setInterval(() => {
-          setCounter(prevCounter => {
-              const newCounter = prevCounter - 1750;
-              return newCounter > 0 ? newCounter : 0;
-          });
-          remainingTime -= 1000;
-          if (remainingTime <= 0) {
-              clearInterval(interval);
-          }
-      }, 1000);
-  
-      return () => clearInterval(interval);
-  }, []);
-  
-  const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [hasSubmitted, setHasSubmitted] = useState(false);
-      
-  const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-        if (hasSubmitted) {
-            if (!e.target.value) {
-                setEmailError('Email is required');
-            } else if (!/\S+@\S+\.\S+/.test(e.target.value)) {
-                setEmailError(`Whoops! Make sure it's an email :)`);
-            } else {
-                setEmailError('');
+        let remainingTime = 20000;
+        const interval = setInterval(() => {
+            setCounter((prevCounter) => (prevCounter - 175 > 0 ? prevCounter - 175 : 0));
+            remainingTime -= 100;
+            if (remainingTime <= 0) {
+                clearInterval(interval);
             }
-        } else {
-            setEmailError('');
+        }, 100);
+
+        return () => clearInterval(interval);
+    }, []);
+    
+
+    const handleEmailChange = (e) => {
+        const inputValue = e.target.value;
+        setEmail(inputValue);
+        const isValidEmail = /\S+@\S+\.\S+/.test(inputValue);
+
+        if (!inputValue || isValidEmail) {
+            setEmailError(false);
         }
     };
 
     const handleSubmit = (e) => {
+        const isValidEmail = /\S+@\S+\.\S+/.test(email);
         e.preventDefault();
-        setHasSubmitted(true);
-        if (!email) {
-            setEmailError('Email is required');
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            setEmailError(`Whoops! Make sure it's an email :)`);
-        } else {
-            setEmailError('');
-        }
+
+        setEmailError(!isValidEmail);
+
+        isValidEmail ? setShowSuccessMessage(true) : setShowSuccessMessage(false);
     };
-    
+
+    const formattedNumber = counter.toLocaleString('de-DE').replace('.', ',');
+
     return (
         <section className="form">
-            <span className="form__counter">
-                {`${counter.toLocaleString('de-DE')}${counter ? '+' : ''}`} already joined
+            <span className="form__counter" aria-live="polite">
+                {`${formattedNumber}${counter ? '+' : ''}`} already joined
             </span>
 
             <h2 className="form__title">Stay up-to-date with what we're doing</h2>
 
             <form onSubmit={handleSubmit} className="form__body">
+                <div className={`
+                    form__input-wrapper
+                    ${showSuccessMessage ? 'form__input-wrapper--success' : ''}
+                    ${emailError ? 'form__input-wrapper--error' : ''}
+                `}>
+                    <input
+                        type="text"
+                        placeholder="Enter your email address"
+                        id="emailInput"
+                        className="form__input"
+                        value={email}
+                        onChange={handleEmailChange}
+                        aria-describedby={emailError ? 'Email error' : null}
+                        autocomplete="off"
+                    />
+                    {emailError && <ErrorIcon className='form__error-icon'/>}
+                </div>
 
-                <input
-                    type="text"
-                    placeholder="Enter your email address"
-                    id="emailInput"
-                    className={`form__input form__input${emailError ? '--error' : ''}`}
-                    value={email}
-                    onChange={handleEmailChange}
-                />
-
-                {emailError && <span className="form__error">{emailError}</span>}
-
-                <button className="form__button button" type="submit">Contact us</button>
-
+                <button
+                    className="form__button button"
+                    type="submit"
+                    aria-label="Contact us"
+                >
+                    Contact us
+                </button>
             </form>
         </section>
-    )
-}
+    );
+};

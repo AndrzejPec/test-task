@@ -2,7 +2,7 @@
 @import '../Modal/Modal.scss';
 
 .features {
-    padding: 200px 0;
+    margin-block: 10rem;
 
     &__link {
         font-size: 20px;
@@ -12,6 +12,9 @@
         border-bottom: 1px solid $grayish;
         position: relative;
         cursor: pointer;
+        margin: 0 auto;
+        width: clamp(300px, 80%, 400px);
+        transition: color 0.3s ease-in-out;
     
         &:first-of-type {
             border-top: 1px solid $grayish;
@@ -63,13 +66,13 @@
     }
 
     &__button {
-        display: none;
+        display: unset;
     }
 }
 
 @media (min-width: $breakpoint) {
     .features {
-        padding: 100px 0;
+        margin-block: 6rem;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -115,12 +118,14 @@
         }
     
         &__content {
+            gap: 6rem;
             flex-direction: row;
             justify-content: start;
         }
     
         &__text-area {
             justify-content: center;
+            margin-right: 5rem;
             width: 50ch;
             align-items: flex-start;
         }
@@ -131,17 +136,75 @@
     }
 }
 
-@container (min-width: 700px) {
+@media (max-width: $breakpoint) {
+    .features__text-area {
+        margin: 0 auto;
+    }
+    
+    .features__top {
+        margin: 0 auto 6rem;
+    }
+    
+    .features__link {
+        width: 80%;
+    }
+    
+    .features p {
+        width: clamp(20rem, 70%, 50ch);
+    }
+    
+    .features__link::after {
+        max-width: 100%;
+    }
+}
+
+@container (max-width: 700px) {
     .features {
-        padding: 10px 0;
         text-align: left;
+        margin-block: 5rem;
+        text-align: center;
+
+        p {
+            margin: 20px 0;
+        }
+
+        &__top {
+            margin: 0;
+        }
 
         &__content {
-            flex-direction: unset;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         &__text-area {
             flex-direction: column;
+        }
+    }
+}
+
+@container (min-width: 700px) {
+    .features {
+        text-align: left;
+        margin-block: 5rem;
+
+        p {
+            margin: 20px 0;
+        }
+
+        &__top {
+            margin: 0;
+        }
+
+        &__content {
+            flex-direction: unset;
+            gap: 10%;
+            justify-content: space-between;
+        }
+
+        &__text-area {
+            flex-direction: column;
+            margin-right: 3rem;
         }
     }
 }

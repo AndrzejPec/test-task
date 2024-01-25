@@ -13,20 +13,24 @@
     -moz-box-shadow: 0px 15px 30px -5px hsl(229, 31%, 75%);
     box-shadow: 0px 15px 30px -5px hsl(229, 31%, 75%);
     transition: box-shadow 0.5s ease;
+    text-align: unset;
+
+    p {
+        margin-inline: unset;
+    }
+
+    &__button {
+        margin: 5px;
+    }
 
     &:hover {
         -webkit-box-shadow: 0px 15px 30px -5px $lightBlue;
         -moz-box-shadow: 0px 15px 30px -5px $lightBlue;
         box-shadow: 0px 15px 30px -5px $lightBlue;
-
-        .download-card__img {
-            transform: rotate(360deg);
-        }
     }
 
     &__img {
         width: 100px;
         padding-bottom: 1rem;
-        transition: transform 1s linear;
     }
 }

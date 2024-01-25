@@ -1,17 +1,32 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .faq {
-    padding: 10rem 0;
+    margin: 10rem auto;
     display: flex;
     flex-direction: column;
     align-self: center;
     max-width: 50ch;
+    @include mobile-responsive-width;
 
     &__button {
         width: 10rem;
         align-self: center;
         margin-top: 5rem;
     }
+}
 
-    p {
-        text-align: center;
+@media (min-width: $breakpoint) {
+    .faq {
+        @include responsive-width;
+        margin: 10rem auto;
+    }
+}
+
+@media (max-width: $breakpoint) {
+    .faq {
+        @include responsive-width;
+        margin: 10rem auto;
+        width: clamp(20rem, 70%, 50ch);
     }
 }

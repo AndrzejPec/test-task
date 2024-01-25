@@ -1,3 +1,6 @@
+import React, { useEffect } from 'react';
+import { Element, Events, scrollSpy } from 'react-scroll';
+
 import './reset.scss';
 import './App.scss';
 
@@ -9,6 +12,7 @@ import { Download } from './components/Download/Download';
 import { FAQ } from './components/FAQ/FAQ';
 import { Form } from './components/Form/Form';
 import { Footer } from './components/Footer/Footer';
+
 
 export const App = () => {
   return (

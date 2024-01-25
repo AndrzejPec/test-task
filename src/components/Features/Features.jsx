@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Element } from 'react-scroll';
 
 import './Features.scss';
 
@@ -49,7 +50,8 @@ export const Features = ({ livesInsideModal }) => {
     };
 
     return (
-        <section className="features">
+        <section className="features" id="features">
+            <Element name="features" />
             <div className='features__top'>
                 {!livesInsideModal && (
                     <>

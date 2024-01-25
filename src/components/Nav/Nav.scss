@@ -1,13 +1,14 @@
 @import '../../styles/variables';
+@import '../../styles/animations';
 
 .nav {
     margin-top: 2rem;
-    padding-inline: $mobile-margin;
+    padding-inline: 30px;
     text-align: initial;
     position: relative;
 
     &__hamburger {
-        transform: scale(1.2);
+        scale: 1.3;
         position: absolute;
         top: 50%;
         right: 15%;
@@ -32,31 +33,34 @@
         width: 100%;
         background-color: rgba(37, 43, 70, 0.9);
         z-index: 1;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
 
     
         &--active {
             display: flex;
-            transform: translateX(0);
-            transition: transform 0.3s ease;
-            padding-block: 6rem;
+            padding-block: 8rem;
             height: 100vh;
+            animation: slideInFromRight 1s ease;
         }
-
     }
 
     &__item {
         color: white;
         padding: 20px 0;
-        width: 370px;
         text-transform: uppercase;
         border-top: 1px solid $grayish;
         cursor: pointer;
 
+        &:hover .nav__link {
+            color: $lightBlue;
+        }
+
         &:last-child {
             padding-top: 30px;
         }
+    }
+
+    &__link {
+        color: white;
     }
 
     &__button {
@@ -77,18 +81,22 @@
     .nav {
         text-align: initial;
         position: unset;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         &__container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: baseline;
+            padding-bottom: 10%;
+            height: 0;
         }
     
         &__logo {
-            transform: scale(1.2) translateX(200px);
-            margin-right: 30%;
+            transform: scale(1.2) translateX(5rem);
+            margin-right: 15%;
+            margin-left: -10%;
+            scale: 1.1;
         }
     
         &__hamburger {
@@ -104,7 +112,6 @@
             &--active {
                 padding-top: 6rem;
             }
-    
         }
     
         &__item {
@@ -121,6 +128,14 @@
                 padding-top: unset;
             }
         }
+
+        .nav__item:hover .nav__link {
+            color: unset;
+        }
+
+        &__link {
+            color: unset;
+        }
     
         &__button {
             min-width: 10rem;
@@ -135,4 +150,108 @@
             }
         }
     }
+
+    .nav__signup {
+        display: none;
+    }
   }
+
+@media (max-width: $breakpoint) {
+    .nav__container {
+        position: relative;
+    }
+
+    svg {
+        scale: 1.2;
+        z-index: 2;
+    }
+
+    .nav__item {
+        width: 80dvw;
+    }
+
+    .nav__hamburger {
+        top: 25px;
+        right: 5%;
+    }
+
+    .nav__button {
+        max-width: 60dvw;
+    }
+
+    .nav__logo {
+        position: absolute;
+        left: 10%;
+        scale: 1.2;
+        top: 5px;
+        z-index: 2;
+    }
+}
+
+.nav__logo--active svg g path {
+    fill: white;
+    cursor: pointer;
+    transition: fill 2s ease;
+}
+
+.nav__logo--closing svg g path {
+    fill: black;
+    transition: fill 2s ease;
+}
+
+@media (max-width: $breakpoint) {
+    .nav {
+        &__item {
+            color: white;
+            padding: 20px 0;
+            text-transform: uppercase;
+            border-top: 1px solid $grayish;
+            cursor: pointer;
+    
+            &:hover {
+                color: $lightBlue;
+                
+                .nav__signup {
+                    opacity: 1;
+                }
+            }
+    
+            &:last-child {
+                padding-top: 30px;
+                position: relative;
+
+                &:hover button {
+                    outline: 2px solid hsl(231, 69%, 60%);
+                }
+            }
+        }
+    
+        &__button {
+            width: 100%;
+            padding-block: 15px;
+            text-transform: uppercase;
+            font: unset;
+            color: unset;
+            cursor: unset;
+            letter-spacing: unset;
+            border-radius: 5px;
+            background: none;
+            outline: auto;
+        }
+
+        &__signup {
+            position: absolute;
+            top: 6rem;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            color: white;
+            font-size: small;
+        }
+    }
+}
+
+.nav__list--closing {
+    animation: closing 0.5s cubic-bezier(1, 0, 0, 1);
+}

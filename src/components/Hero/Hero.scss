@@ -1,13 +1,18 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .hero {
 
     &__content {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 6rem;
         margin-top: 5rem;
-        margin-inline: 5rem;
+        margin-inline: auto;
+    }
+
+    &__text {
+        @include mobile-responsive-width;
     }
 
     &__header {
@@ -19,16 +24,19 @@
 
     &__buttons {
         display: flex;
-        gap: 20px;
         justify-content: space-around;
+        align-self: center;
+        gap: 5rem;
     }
 
     &__button {
         color: white;
+        min-width: 10rem;
         background-color: $lightBlue;
         -webkit-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
         -moz-box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
         box-shadow: 0px 8px 26px -12px $lightBlueTransparent;
+        transition: box-shadow 0.5s ease;
 
         &:hover {
             background: none;
@@ -62,11 +70,26 @@
         }
 
         &__text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 50ch;
-            justify-content: center;
-        }
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 50ch;
+                justify-content: center;
+                @include responsive-width;
+                margin-left: 5rem;
+            }
+    }
+}
+
+@media (max-width: $breakpoint) {
+    .hero__text {
+        width: clamp(300px, 80%, 50ch);
+    }
+
+    .hero__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 0 auto;
     }
 }

@@ -1,12 +1,21 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/animations.scss';
 
 .form {
     display: flex;
     gap: 2rem;
     padding: 4rem 2rem 2rem;
-    background-color: hsl(231, 69%, 60%);
+    background-color: $lightBlue;
     color: white;
     flex-direction: column;
+    border: transparent;
+
+    &__error-icon {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+    }
 
     &__counter {
         text-transform: uppercase;
@@ -19,57 +28,62 @@
 
     &__body {
         display: flex;
-        gap: 2rem;
         flex-direction: column;
-        position: relative;
+        align-items: baseline;
+        gap: 1rem;
+        @include mobile-responsive-width;
+        width: clamp(300px, 80%, 30rem);
+        margin: 0 auto 8rem;
     }
 
     &__input {
         border: none;
-        padding: $input-padding;
+        padding: 1.25rem;
         border-radius: 4px;
-        position: relative;
         outline: none;
         box-shadow: none;
-        min-height: $input-height;
-        width: clamp(200px, 75%, 500px);
+        min-height: 1rem;
         margin: 0 auto;
-        border-bottom: 10px solid $lightRed;
+        width: 100%;
+        box-sizing: border-box;
+
+        &-wrapper {
+            margin: 0 auto;
+            transition: border 0.3s ease, outline 0.3s ease;
+            border: 0 solid transparent;
+            border-radius: 5px;
+            width: 100%;
+            position: relative;
+
+            &::after {
+                content: '\00a0';
+                pointer-events: none;
+            }
+
+            &--error {
+                @include input-message("Whoops! Make sure it's an email :)", $lightRed, white);
+                outline: 5px solid $lightRed;
+                animation: shake 0.5s ease;
+            }
+
+            &--success {
+                @include input-message("\1F389 We've received your e-mail! \1F389", olive, goldenrod);
+                outline: 5px solid olive;
+            }
+        }
 
         &::placeholder {
             color: $grayish;
         }
-
-        &--error {
-            border: 2px solid $lightRed;
-            z-index: 2;
-        }
-    }
-
-    &__error {
-      display: block;
-      color: white;
-      background-color: $lightRed;
-      border-radius: .25em;
-      position: absolute;
-      top: 50px;
-      padding-top: 5px;
-      padding-left: 10px;
-      left: 0;
-      right: 0;
-      text-align: left;
-      z-index: 1;
-      font-style: italic;
-      font-size: smaller;
     }
 
     &__button {
         border: none;
         background-color: $lightRed;
-        max-height: 1rem;
-        box-sizing: content-box;
-        width: clamp(200px, 75%, 500px);
-        margin: 0 auto;
+        box-sizing: border-box;
+        max-width: unset;
+        width: 100%;
+        top: 5rem;
 
         &:hover {
             background-color: whitesmoke;
@@ -84,25 +98,24 @@
         padding: 30px;
         height: 300px;
         background-color: $lightBlue;
-    
+
         &__body {
             flex-direction: row;
+            gap: 1rem;
+            justify-content: right;
+            width: clamp(20rem, 50%, 50ch);
             align-self: center;
             justify-content: space-evenly;
             width: 50%;
-            align-items: center;
+            align-items: baseline;
         }
 
         &__button {
-            max-width: 42ch;
+            max-width: 8rem;
         }
-    
-        &__input {
-            width: 15rem;
-        }
-    
+
         &__error {
-          width: 400px;
+            width: 400px;
         }
     }
 }

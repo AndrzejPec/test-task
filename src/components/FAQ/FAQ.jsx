@@ -7,11 +7,11 @@ import { Accordion } from '../Accordion/Accordion';
 const FAQ_DATA = [
     {
         title: "What is Bookmark?",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo consectetur quod distinctio expedita asperiores minima placeat explicabo corrupti! Dolore minus, aliquam non hic officiis ipsa tenetur. Quo consequuntur soluta et?..."
     },
     {
         title: "How can I request a new browser?",
-        content: "Vivamus luctus eros aliquet convallis ultricies..."
+        content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, totam animi excepturi pariatur quaerat iure sint sed nemo vitae ut velit voluptas earum iusto praesentium sit nihil enim error doloribus consectetur? Minima eum optio eius itaque dolorum. Magni quod, commodi aperiam aliquid facilis ea cum rerum vitae distinctio facere, officia atque sunt. Hic eum dolor, quos quis debitis error fugit!..."
     },
     {
         title: "Is there a mobile app?",

@@ -3,12 +3,13 @@
 .footer {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 3rem 0;
     gap: 3rem;
     height: 100%;
     background-color: $darkBlue;
     align-items: center;
     color: white;
+    position: relative;
 
     &__nav {
         display: flex;
@@ -17,11 +18,6 @@
     }
 
     &__logo {
-        cursor: pointer;
-    }
-
-    &__logo svg path g {
-        fill: white;
         cursor: pointer;
     }
 
@@ -50,8 +46,8 @@
         gap: 2rem;
         cursor: pointer;
 
-        & svg path:hover  {
-            fill: orange;
+        & a:hover svg path{
+            fill: $lightRed;
         }
     }
 }
@@ -64,6 +60,7 @@
 @media (min-width: $breakpoint) {
     .footer {
         flex-direction: row;
+        padding: 1.5rem 0;
         justify-content: space-evenly;
         gap: 10px;
 
@@ -79,7 +76,6 @@
     
         &__social {
             margin-top: unset;
-            gap: 5rem;
         }
     }
 }
